@@ -1,17 +1,13 @@
 .home-parent {
     margin-top: 0;
     width: 100%;
-    overflow: hidden;
     height: 40rem;
-}
-
-
-.home-parent-bg {
-    position: fixed;
+    overflow: hidden;
 }
 
 .home-container {
-    margin-top: 10rem;
+    top: 10rem;
+    /* margin-top: 10rem; */
     position: absolute;
     z-index: 1;
     color: white;
@@ -68,6 +64,24 @@
     gap: 10px;
 }
 
+.home-back-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
 @media (min-width: 700px) and (max-width: 800px) {
     .home-parent {
         height: 25rem;
@@ -75,7 +89,7 @@
 
     .home-container {
         padding: 14px;
-        margin-top: 5rem;
+        top: 10%;
 
     }
 
@@ -103,6 +117,48 @@
 
     .dev-title-3 {
         font-size: 25px;
+        display: flex;
+        gap: 10px;
+    }
+}
+
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .home-parent {
+        height: 20rem;
+    }
+
+    .home-container {
+        padding: 8px;
+        top: 10%;
+
+    }
+
+    .social-icon-parent {
+        margin-top: 0;
+        gap: 10px;
+    }
+
+    .menu-parent {
+        font-size: 0.8rem;
+    }
+
+    .logo-parent {
+        flex: 1;
+    }
+
+    .dev-title-1 {
+        margin-top: 1rem;
+        font-size: 15px;
+        color: #32CD32;
+    }
+
+    .dev-title-2 {
+        font-size: 20px;
+    }
+
+    .dev-title-3 {
+        font-size: 10px;
         display: flex;
         gap: 10px;
     }

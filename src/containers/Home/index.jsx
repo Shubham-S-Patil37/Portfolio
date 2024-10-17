@@ -25,6 +25,10 @@ const Home = () => {
         <div>
             <Nav />
             <div className='home-parent'>
+                <diV className="img-wrapper">
+                    <img src={homeBG} alt="Background" className='home-back-img' />
+                </diV>
+
                 <div className='home-container'>
                     <div style={{ display: "flex" }}>
                         <div className='home-section-1'>
@@ -66,12 +70,10 @@ const Home = () => {
                         </div>
                     </div>
 
-
-
                 </div>
 
-                <img src={homeBG} alt="Background" style={{ width: "100%" }} />
             </div>
+
 
         </div>
     )

@@ -16,6 +16,7 @@
     font-size: medium;
     color: #dcdbdb;
     flex: 2;
+    cursor: pointer;
 }
 
 .menu-parent {
@@ -39,7 +40,7 @@
 
 .mobile-menu-parent {
     display: none;
-    flex: 0.3;
+    flex: 0.1;
 }
 
 @media (min-width: 700px) and (max-width: 800px) {
@@ -66,3 +67,18 @@
     }
 
 }
+
+
+/* @media (min-width: 400px) and (max-width: 500px) {
+    .nav-parent {
+        width: 98%;
+    }
+
+    .menu-parent {
+        font-size: 0.8rem;
+    }
+
+    .logo-parent {
+        flex: 1;
+    }
+} */
