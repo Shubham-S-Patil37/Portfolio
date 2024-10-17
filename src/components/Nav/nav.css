@@ -6,6 +6,7 @@
     width: 100%;
     /* padding: 10px, 10px; */
     z-index: 10;
+    background-color: rgb(48, 44, 44, 0.8);
 }
 
 .logo-parent {
