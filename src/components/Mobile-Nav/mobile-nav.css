@@ -1,0 +1,28 @@
+.sidebar {
+    position: fixed;
+    background-color: #333;
+    width: 200px;
+    height: 100%;
+    top: 0;
+    left: -250px;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.menu-items {
+    padding: 20px;
+    list-style: none;
+    color: #fff;
+}
+
+.menu-items li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.menu-items li:hover {
+    color: #ff5722;
+}
