@@ -123,7 +123,7 @@
 }
 
 
-@media (min-width: 400px) and (max-width: 500px) {
+@media (min-width: 300px) and (max-width: 500px) {
     .home-parent {
         height: 20rem;
     }
@@ -131,7 +131,6 @@
     .home-container {
         padding: 8px;
         top: 10%;
-
     }
 
     .social-icon-parent {
