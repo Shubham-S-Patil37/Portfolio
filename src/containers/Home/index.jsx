@@ -21,10 +21,12 @@ const Home = () => {
     ]
 
     const homeIntoCard = [
-        { "icon": faConnectdevelop, "title": "Technology", "description": "" },
-        { "icon": faPhoenixFramework, "title": "Dedication", "description": "" },
-        { "icon": faPersonWalking, "title": "Smart work", "description": "" }
+        { "icon": faConnectdevelop, "title": "Technology", "description": "Experienced in a diverse range of technologies, including front-end and back-end development, ensuring seamless integration, scalable solutions, and optimal performance." },
+        { "icon": faPhoenixFramework, "title": "Dedication", "description": "Strong dedication to work ensures consistent effort and focus in achieving high-quality outcomes. This commitment drives mastery across a development, enabling seamless integration and scalability." },
+        { "icon": faPersonWalking, "title": "Smart Coding", "description": "A focus on smart work ensures efficient solutions with minimal effort and maximum impact. Writing clean, optimized code across enables seamless integration and high performance." },
+        // { "icon": faConnectdevelop, "title": "Technology", "description": "" },
     ]
+
     const onClickSocialMediaIcon = (url) => {
         window.open(url, "_blank");
     }
@@ -88,14 +90,14 @@ const Home = () => {
                             homeIntoCard.map((ele) =>
                                 <div className='home-card'>
                                     <div>
-                                        <FontAwesomeIcon icon={ele.icon} style={{ marginTop: "10px", padding: "10px", height: "45px", width: "45px" }} />
+                                        <FontAwesomeIcon icon={ele.icon} className='home-card-icon' />
                                     </div>
-                                    <div style={{ padding: "10px", fontSize: "30px" }}>
+                                    <div className='home-card-title'>
                                         {ele.title}
                                     </div>
 
-                                    <div style={{ padding: "10px", fontSize: "15px" }}>
-                                        Hi this is shubham patil which is best developer in the word. Which make software very creative and effective which make software soft and unique.
+                                    <div className='home-card-description'>
+                                        {ele.description}
                                     </div>
                                 </div>
                             )
