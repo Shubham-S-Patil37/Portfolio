@@ -1,7 +1,7 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect';
-import { faGithub, faLinkedin, faConnectdevelop, faPhoenixFramework } from '@fortawesome/free-brands-svg-icons';
-import { faPersonWalking } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin, faConnectdevelop, faPhoenixFramework, faCloudflare } from '@fortawesome/free-brands-svg-icons';
+import { faPersonWalking, faUsers, faFeather, faChalkboard, faDoorOpen, faExplosion } from '@fortawesome/free-solid-svg-icons';
 import { faChessQueen } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -9,6 +9,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Nav from "./../../components/Nav/index"
 import homeBG from "../../assets/slider-bg.jpg"
 import profile from "../../assets/profile2.png"
+
+import myServiceImage from "../../assets/serive_back1.png"
+import creativeDesign from "../../assets/creativeDesign.png"
+import responsiveWeb from "../../assets/responsiveWeb.png"
+import connection from "../../assets/connection.png"
 
 import cv from "../../assets/Shubham_Patil Resume.pdf"
 
@@ -27,6 +32,15 @@ const Home = () => {
         { "icon": faPhoenixFramework, "title": "Problem Solving", "description": "Effective problem-solving involves analyzing challenges, identifying root causes, and implementing practical solutions. It requires critical thinking, creativity, and technical expertise to overcome obstacles efficiently." },
         { "icon": faPersonWalking, "title": "Smart Coding", "description": "A focus on smart work ensures efficient solutions with minimal effort and maximum impact. Writing clean, optimized code across enables seamless integration and high performance." },
         { "icon": faChessQueen, "title": "Strategic Thinking", "description": "Strategic thinking involves planning with foresight, setting clear objectives, and aligning resources to achieve long-term goals. It emphasizes evaluating risks, identifying opportunities, and making data-driven decisions." },
+    ]
+
+    const myServiceInfo = [
+        { "icon": faFeather, "title": "Creative Design" },
+        { "icon": faChalkboard, "title": "Efficient Website" },
+        { "icon": faCloudflare, "title": "Seamless API Integration" },
+        { "icon": faUsers, "title": "User-Friendly UI/UX" },
+        { "icon": faDoorOpen, "title": "Microservices Expertise" },
+        { "icon": faExplosion, "title": "Performance Optimization" },
     ]
 
     const onClickSocialMediaIcon = (url) => {
@@ -85,7 +99,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div className='home-card-primary'>
+                {/* <div className='home-card-primary'>
                     <div className='home-card-parent'>
                         {
                             homeIntoCard.map((ele) =>
@@ -103,6 +117,34 @@ const Home = () => {
                                 </div>
                             )
                         }
+                    </div>
+                </div> */}
+
+                <div>
+                    <div className='service-parent'>
+                        <div className='service-section-1'>
+                            <img src={myServiceImage} style={{ height: "100%", width: '100%' }} />
+                        </div>
+                        <div className='service-section-2'>
+                            <div className='service-section-2-title' >What kind of services i provides</div>
+                            <div className='service-section-2-description'>
+                                I offer innovative digital solutions tailored to meet business needs, ensuring high performance, security, and seamless user experiences. My services focus on delivering scalable, efficient, and modern technology solutions with precision and creativity.
+                            </div>
+
+                            <div className='service-item-parent'>
+
+                                {
+                                    myServiceInfo.map((ele) =>
+                                        <span className='service-item'>
+                                            <FontAwesomeIcon icon={ele.icon} />
+                                            {/* <img src={ele.icon} alt="Background" className='service-item-icon' /> */}
+                                            <div>{ele.title}</div>
+                                        </span>
+                                    )
+                                }
+
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {/* ********************************************************************** HOME ********************************************************************** */}
