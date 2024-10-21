@@ -2,7 +2,9 @@ import React from 'react'
 import Typewriter from 'typewriter-effect';
 import { faGithub, faLinkedin, faConnectdevelop, faPhoenixFramework } from '@fortawesome/free-brands-svg-icons';
 import { faPersonWalking } from '@fortawesome/free-solid-svg-icons';
+import { faChessQueen } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 import Nav from "./../../components/Nav/index"
 import homeBG from "../../assets/slider-bg.jpg"
@@ -22,9 +24,9 @@ const Home = () => {
 
     const homeIntoCard = [
         { "icon": faConnectdevelop, "title": "Technology", "description": "Experienced in a diverse range of technologies, including front-end and back-end development, ensuring seamless integration, scalable solutions, and optimal performance." },
-        { "icon": faPhoenixFramework, "title": "Dedication", "description": "Strong dedication to work ensures consistent effort and focus in achieving high-quality outcomes. This commitment drives mastery across a development, enabling seamless integration and scalability." },
+        { "icon": faPhoenixFramework, "title": "Problem Solving", "description": "Effective problem-solving involves analyzing challenges, identifying root causes, and implementing practical solutions. It requires critical thinking, creativity, and technical expertise to overcome obstacles efficiently." },
         { "icon": faPersonWalking, "title": "Smart Coding", "description": "A focus on smart work ensures efficient solutions with minimal effort and maximum impact. Writing clean, optimized code across enables seamless integration and high performance." },
-        // { "icon": faConnectdevelop, "title": "Technology", "description": "" },
+        { "icon": faChessQueen, "title": "Strategic Thinking", "description": "Strategic thinking involves planning with foresight, setting clear objectives, and aligning resources to achieve long-term goals. It emphasizes evaluating risks, identifying opportunities, and making data-driven decisions." },
     ]
 
     const onClickSocialMediaIcon = (url) => {
@@ -83,9 +85,8 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div style={{ height: "30rem" }}>
+                <div className='home-card-primary'>
                     <div className='home-card-parent'>
-
                         {
                             homeIntoCard.map((ele) =>
                                 <div className='home-card'>
@@ -102,7 +103,6 @@ const Home = () => {
                                 </div>
                             )
                         }
-
                     </div>
                 </div>
                 {/* ********************************************************************** HOME ********************************************************************** */}
