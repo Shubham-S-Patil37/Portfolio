@@ -11,9 +11,7 @@ import homeBG from "../../assets/slider-bg.jpg"
 import profile from "../../assets/profile2.png"
 
 import myServiceImage from "../../assets/serive_back1.png"
-import creativeDesign from "../../assets/creativeDesign.png"
-import responsiveWeb from "../../assets/responsiveWeb.png"
-import connection from "../../assets/connection.png"
+import aboutMe from "../../assets/aboutme.jpg"
 
 import cv from "../../assets/Shubham_Patil Resume.pdf"
 
@@ -54,11 +52,11 @@ const Home = () => {
     return (
         <div>
             <Nav />
+            {/* ********************************************************************** HOME ********************************************************************** */}
             <div className='home-parent'>
                 <div className="img-wrapper">
                     <img src={homeBG} alt="Background" className='home-back-img' />
                 </div>
-                {/* ********************************************************************** HOME ********************************************************************** */}
                 <div className='home-container'>
                     <div style={{ display: "flex" }}>
                         <div className='home-section-1'>
@@ -99,31 +97,11 @@ const Home = () => {
                     </div>
 
                 </div>
-                {/* <div className='home-card-primary'>
-                    <div className='home-card-parent'>
-                        {
-                            homeIntoCard.map((ele) =>
-                                <div className='home-card'>
-                                    <div>
-                                        <FontAwesomeIcon icon={ele.icon} className='home-card-icon' />
-                                    </div>
-                                    <div className='home-card-title'>
-                                        {ele.title}
-                                    </div>
-
-                                    <div className='home-card-description'>
-                                        {ele.description}
-                                    </div>
-                                </div>
-                            )
-                        }
-                    </div>
-                </div> */}
 
                 <div>
                     <div className='service-parent'>
                         <div className='service-section-1'>
-                            <img src={myServiceImage} style={{ height: "100%", width: '100%' }} />
+                            <img src={myServiceImage} style={{ height: "100%", width: '85%' }} />
                         </div>
                         <div className='service-section-2'>
                             <div className='service-section-2-title' >What kind of services i provides</div>
@@ -147,8 +125,55 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                {/* ********************************************************************** HOME ********************************************************************** */}
+
             </div>
+            {/* ********************************************************************** ABOUT ME ********************************************************************** */}
+
+            <div className='about-me-parent'>
+                <div className='about-container'>
+                    <div className='about-me-section-1'>
+                        <div className='about-me-title'>ABOUT ME</div>
+                        <div className='about-me-title2'>I Develop System that Works</div>
+                        <div className="about-me-description">
+                            Creative Fullstack Developer with a robust proficiency in API-driven design encompassing Frontend, Backend, and REST API
+                            development. Specializes in various databases, including MongoDB, with expertise in Microservices and MVC Architecture.
+                            Demonstrates excellence in managing the seamless interchange of data between servers and users.
+                        </div>
+
+                        <div className='about-me-user-info'>
+                            <ul className='about-me-user-info-container'>
+                                <li className='about-me-user-info-key'>
+                                    <p>Name</p>
+                                    <p>AGE</p>
+                                    <p>Designation</p>
+                                </li>
+                                <li>
+                                    <p>Shubham S Patil</p>
+                                    <p>26 Years</p>
+                                    <p>Software Developer</p>
+                                </li>
+                            </ul>
+
+                            <ul className='about-me-user-info-container'>
+                                <li className='about-me-user-info-key'>
+                                    <p>Phone</p>
+                                    <p>Email</p>
+                                    <p>Course</p>
+                                </li>
+                                <li>
+                                    <p>+91 996 026 2933</p>
+                                    <p>patilshubham373737@gmail.com</p>
+                                    <p>B. Tech</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='about-me-section-2'>
+                        <img src={aboutMe} className='about-me-image' />
+                    </div>
+                </div>
+            </div>
+            {/* ********************************************************************** ABOUT ME ********************************************************************** */}
 
 
         </div>

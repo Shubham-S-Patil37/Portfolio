@@ -1,22 +1,22 @@
 .home-parent {
     margin-top: 0;
     width: 100%;
-    height: 40rem;
+    height: 80rem;
     /* overflow: hidden; */
 }
 
 .home-container {
+    align-items: center;
     top: 10rem;
-    /* margin-top: 10rem; */
     position: absolute;
     z-index: 1;
     color: white;
-    width: 96%;
+    width: 95%;
     padding: 20px;
 }
 
 .home-section-1 {
-    flex: 3;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -66,6 +66,7 @@
     font-size: 35px;
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .home-back-img {
@@ -80,7 +81,7 @@
 
 .img-wrapper {
     width: 100%;
-    height: 100%;
+    height: 50%;
 }
 
 .home-card-parent {
@@ -129,11 +130,11 @@
 }
 
 .service-parent {
-    padding: 20px;
+    padding: 4%;
     display: flex;
     /* justify-content: center;
     align-items: center; */
-    height: 40rem;
+    height: 100%;
 }
 
 .service-section-1 {
@@ -182,14 +183,91 @@
     height: 50%;
 }
 
+.about-me-parent {
+    margin-top: 0;
+    /* padding: 20px; */
+    width: 100%;
+    height: 40rem;
+    background-color: #EFEFEF;
+}
+
+.about-container {
+    display: flex;
+    padding: 4%;
+    gap: 30px;
+}
+
+.about-me-section-1 {
+    height: 100%;
+    flex: 1.5;
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.about-me-section-2 {
+    color: #fff;
+    flex: 1;
+    width: 100%;
+}
+
+.about-me-image {
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.about-me-title {
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    color: rgb(3, 166, 3);
+}
+
+.about-me-title2 {
+    font-size: 2rem;
+}
+
+.about-me-description {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.about-me-user-info {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-top: 2rem;
+}
+
+.about-me-user-info-container {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 50%;
+    /* gap: 10%; */
+    padding: 0;
+}
+
+
+.about-me-user-info-key {
+    /* font-size: 20px;
+    font-weight: bold; */
+    /* flex: 1; */
+    width: 30%;
+}
+
+
 @media (min-width: 1100px) and (max-width: 1400px) {
     .home-parent {
-        height: 27rem;
+        height: 70rem;
     }
 
     .home-container {
         padding: 14px;
-        top: 10%;
+        top: 20%;
     }
 
     .social-icon-parent {
@@ -225,9 +303,9 @@
     }
 }
 
-@media (min-width: 900px) and (max-width: 1100px) {
+@media (min-width: 1000px) and (max-width: 1100px) {
     .home-parent {
-        height: 27rem;
+        height: 72rem;
     }
 
     .home-container {
@@ -266,11 +344,73 @@
     .download-cv {
         width: 25%;
     }
+
+    .about-me-section-2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-me-image {
+        height: 100%;
+        width: 82%;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+    .home-parent {
+        height: 75rem;
+    }
+
+    .img-wrapper {
+        height: 45%;
+    }
+
+    .home-container {
+        padding: 22px;
+        top: 10%;
+    }
+
+    .social-icon-parent {
+        margin-top: 0;
+    }
+
+    .menu-parent {
+        font-size: 0.8rem;
+    }
+
+    .logo-parent {
+        flex: 1.5;
+    }
+
+    .dev-title-1 {
+        font-size: 30px;
+    }
+
+    .dev-title-2 {
+        font-size: 40px;
+    }
+
+    .dev-title-3 {
+        font-size: 25px;
+    }
+
+    .home-section-1 {
+        flex: 2;
+    }
+
+    .download-cv {
+        width: 25%;
+    }
+
+    .about-me-image {
+        width: 100%;
+        height: 92%;
+    }
 }
 
 @media (min-width: 800px) and (max-width: 900px) {
     .home-parent {
-        height: 27rem;
+        height: 54rem;
     }
 
     .home-container {
@@ -340,10 +480,6 @@
         height: 55rem;
     }
 
-    .service-parent {
-        height: 25rem;
-    }
-
     .service-section-2-title {
         font-size: 20px;
     }
@@ -363,18 +499,27 @@
 
     .service-item {
         gap: 7px;
+    }
+
+    .about-me-image {
+        width: 100%;
+        height: 100%;
     }
 }
 
 @media (min-width: 700px) and (max-width: 800px) {
     .home-parent {
-        height: 27rem;
+        height: 54rem;
     }
 
     .home-container {
         padding: 14px;
         top: 10%;
 
+    }
+
+    .home-section-1 {
+        flex: 2;
     }
 
     .social-icon-parent {
@@ -438,10 +583,6 @@
         height: 55rem;
     }
 
-    .service-parent {
-        height: 25rem;
-    }
-
     .service-section-2-title {
         font-size: 20px;
     }
@@ -462,11 +603,42 @@
     .service-item {
         gap: 7px;
     }
+
+    .about-me-parent {
+        height: 27rem;
+    }
+
+    .about-me-image {
+        width: 100%;
+    }
+
+    .about-me-title {
+        font-size: 1rem;
+    }
+
+    .about-me-title2 {
+        font-size: 1rem;
+    }
+
+    .about-me-description {
+        font-size: 0.8rem;
+    }
+
+    .about-me-user-info {
+        /* display: block; */
+        margin-top: 1rem;
+    }
+
+    .about-me-user-info-container {
+        /* gap: 10%; */
+        font-size: 0.7rem;
+        width: 100%;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 700px) {
     .home-parent {
-        height: 20rem;
+        height: 40rem;
     }
 
     .home-container {
@@ -539,11 +711,15 @@
 
 @media (min-width: 500px) and (max-width: 600px) {
     .home-parent {
-        height: 20rem;
+        height: 56rem;
+    }
+
+    .img-wrapper {
+        height: 40%;
     }
 
     .home-container {
-        padding: 8px;
+        padding: 13px;
         top: 10%;
     }
 
@@ -609,10 +785,6 @@
         height: 55rem;
     }
 
-    .service-parent {
-        height: 30rem;
-    }
-
     .service-section-1 {
         display: none;
     }
@@ -637,11 +809,50 @@
     .service-item {
         gap: 7px;
     }
+
+    .about-me-parent {
+        height: 30rem;
+    }
+
+    .about-me-section-1 {
+        gap: 10px;
+    }
+
+    .about-me-section-2 {
+        display: none;
+    }
+
+    .about-me-title {
+        font-size: 1rem;
+    }
+
+    .about-me-title2 {
+        font-size: 1rem;
+    }
+
+    .about-me-description {
+        font-size: 0.8rem;
+    }
+
+    .about-me-user-info {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .about-me-user-info-container {
+        /* gap: 10%; */
+        font-size: 0.7rem;
+        width: 100%;
+    }
 }
 
 @media (min-width: 400px) and (max-width: 500px) {
     .home-parent {
-        height: 20rem;
+        height: 55rem;
+    }
+
+    .img-wrapper {
+        height: 40%;
     }
 
     .home-container {
@@ -711,10 +922,6 @@
         height: 55rem;
     }
 
-    .service-parent {
-        height: 30rem;
-    }
-
     .service-section-1 {
         display: none;
     }
@@ -739,11 +946,50 @@
     .service-item {
         gap: 7px;
     }
+
+    .about-me-parent {
+        height: 30rem;
+    }
+
+    .about-me-section-1 {
+        gap: 10px;
+    }
+
+    .about-me-section-2 {
+        display: none;
+    }
+
+    .about-me-title {
+        font-size: 1rem;
+    }
+
+    .about-me-title2 {
+        font-size: 1rem;
+    }
+
+    .about-me-description {
+        font-size: 0.8rem;
+    }
+
+    .about-me-user-info {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .about-me-user-info-container {
+        /* gap: 10%; */
+        font-size: 0.7rem;
+        width: 100%;
+    }
 }
 
 @media (min-width: 300px) and (max-width: 400px) {
     .home-parent {
-        height: 20rem;
+        height: 50rem;
+    }
+
+    .img-wrapper {
+        height: 40%;
     }
 
     .home-container {
@@ -814,10 +1060,6 @@
         height: 50rem;
     }
 
-    .service-parent {
-        height: 30rem;
-    }
-
     .service-section-1 {
         display: none;
     }
@@ -843,4 +1085,38 @@
         gap: 7px;
     }
 
+    .about-me-section-1 {
+        gap: 10px;
+    }
+
+    .about-me-section-2 {
+        display: none;
+    }
+
+    .about-me-title {
+        font-size: 1rem;
+    }
+
+    .about-me-title2 {
+        font-size: 1rem;
+    }
+
+    .about-me-description {
+        font-size: 0.8rem;
+    }
+
+    .about-me-user-info {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .about-me-user-info-container {
+        /* gap: 10%; */
+        font-size: 0.7rem;
+        width: 100%;
+    }
+
+    .about-me-parent {
+        height: 30rem;
+    }
 }
