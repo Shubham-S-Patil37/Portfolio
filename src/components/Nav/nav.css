@@ -34,6 +34,7 @@
     gap: 30px;
     cursor: pointer;
     color: #fff;
+    margin: auto;
 }
 
 .menu-item li:hover {
