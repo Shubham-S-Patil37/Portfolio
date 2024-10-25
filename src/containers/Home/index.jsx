@@ -1,4 +1,4 @@
-import React from 'react'
+import { useRef, useState } from 'react'
 import Typewriter from 'typewriter-effect';
 import { faGithub, faLinkedin, faConnectdevelop, faPhoenixFramework, faCloudflare } from '@fortawesome/free-brands-svg-icons';
 import { faPersonWalking, faUsers, faFeather, faChalkboard, faDoorOpen, faExplosion } from '@fortawesome/free-solid-svg-icons';
@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 import Nav from "./../../components/Nav/index"
+import Card from '../../components/cards';
 import homeBG from "../../assets/slider-bg.jpg"
 import profile from "../../assets/profile2.png"
 
@@ -18,6 +19,12 @@ import cv from "../../assets/Shubham_Patil Resume.pdf"
 import "../Home/home.css"
 
 const Home = () => {
+
+    const homeRef = useRef(null);
+    const aboutRef = useRef(null);
+    const workRef = useRef(null);
+    const servicesRef = useRef(null);
+    const contactUsRef = useRef(null);
 
     const socialMedia = [
         { "Name": "Github", "icon": faGithub, "url": "https://github.com/Shubham-S-Patil37" },
@@ -32,6 +39,7 @@ const Home = () => {
         { "icon": faChessQueen, "title": "Strategic Thinking", "description": "Strategic thinking involves planning with foresight, setting clear objectives, and aligning resources to achieve long-term goals. It emphasizes evaluating risks, identifying opportunities, and making data-driven decisions." },
     ]
 
+
     const myServiceInfo = [
         { "icon": faFeather, "title": "Creative Design" },
         { "icon": faChalkboard, "title": "Efficient Website" },
@@ -39,6 +47,14 @@ const Home = () => {
         { "icon": faUsers, "title": "User-Friendly UI/UX" },
         { "icon": faDoorOpen, "title": "Microservices Expertise" },
         { "icon": faExplosion, "title": "Performance Optimization" },
+    ]
+
+    const skillSet = [
+        { "Name": "React JS", "Completed": "50" },
+        { "Name": "Node JS", "Completed": "80" },
+        { "Name": "Python", "Completed": "70" },
+        { "Name": "HTML", "Completed": "90" },
+        { "Name": "CSS", "Completed": "40" },
     ]
 
     const onClickSocialMediaIcon = (url) => {
@@ -49,11 +65,24 @@ const Home = () => {
         window.open(url, "_blank");
     }
 
+    const onClickMenu = (menuName) => {
+        if (menuName == "Home")
+            homeRef.current.scrollIntoView({ behavior: 'smooth' });
+        else if (menuName == "About")
+            aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+        else if (menuName == "Work")
+            workRef.current.scrollIntoView({ behavior: 'smooth' });
+        else if (menuName == "Service")
+            servicesRef.current.scrollIntoView({ behavior: 'smooth' });
+        else if (menuName == "Contact")
+            contactUsRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+
     return (
         <div>
-            <Nav />
+            <Nav onClickMenu={onClickMenu} />
             {/* ********************************************************************** HOME ********************************************************************** */}
-            <div className='home-parent'>
+            <div className='home-parent' ref={homeRef}>
                 <div className="img-wrapper">
                     <img src={homeBG} alt="Background" className='home-back-img' />
                 </div>
@@ -129,7 +158,7 @@ const Home = () => {
             </div>
             {/* ********************************************************************** ABOUT ME ********************************************************************** */}
 
-            <div className='about-me-parent'>
+            <div className='about-me-parent' ref={aboutRef}>
                 <div className='about-container'>
                     <div className='about-me-section-1'>
                         <div className='about-me-title'>ABOUT ME</div>
@@ -173,9 +202,16 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            {/* ********************************************************************** ABOUT ME ********************************************************************** */}
-
-
+            {/* ********************************************************************** Services ********************************************************************** */}
+            <div ref={servicesRef} className='services-parent'>
+                <div className='cards-parent-container'>
+                    {
+                        skillSet.map((ele) =>
+                            <Card title={ele.Name} completed={ele.Completed} />
+                        )
+                    }
+                </div>
+            </div>
         </div>
     )
 }

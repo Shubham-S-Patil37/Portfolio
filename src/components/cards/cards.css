@@ -1,0 +1,17 @@
+.card-parent {
+    height: 100% !important;
+    width: 100% !important;
+    /* background-color: #2C2D32; */
+    background-color: #1d1d1d;
+    padding: 20px;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: antiquewhite;
+}
+
+.progress-bar-parent {
+    width: 100%;
+    height: 20px;
+}

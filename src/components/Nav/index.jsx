@@ -4,14 +4,16 @@ import { faCode, faBars } from '@fortawesome/free-solid-svg-icons';
 import MobileNav from "./../Mobile-Nav/index"
 
 import "./nav.css"
-const Nav = () => {
+const Nav = ({ onClickMenu }) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
+    const menuItems = ["Home", "About", "Work", "Service", "Contact"]
 
     const onClickMobileMenu = () => {
         setIsOpen(!isOpen)
     }
+
     return (
         <div className='nav-parent'>
             <div className='logo-parent'>
@@ -21,17 +23,18 @@ const Nav = () => {
 
             <div className='menu-parent'>
                 <ul className='menu-item'>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Work</li>
-                    <li>Service</li>
-                    <li>Contact</li>
+
+                    {
+                        menuItems.map((ele) =>
+                            <li onClick={() => onClickMenu(ele)} >{ele}</li>
+                        )
+                    }
                 </ul>
             </div>
 
             <div className='mobile-menu-parent'>
                 <FontAwesomeIcon icon={faBars} onClick={onClickMobileMenu} />
-                <MobileNav isOpen={isOpen} />
+                <MobileNav isOpen={isOpen} menuItems={menuItems} onClickMenu={onClickMenu} />
             </div>
         </div>
     )

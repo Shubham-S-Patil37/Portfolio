@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import './mobile-nav.css'; // Import CSS styles
 
-const MobileNav = ({ isOpen }) => {
+const MobileNav = ({ isOpen, menuItems, onClickMenu }) => {
 
     return (
         <div className={`sidebar ${isOpen ? 'open' : ''}`}>
             <ul className="menu-items">
-                <li>Home</li>
-                <li>About</li>
-                <li>Work</li>
-                <li>Service</li>
-                <li>Contact</li>
+                {
+                    menuItems.map((ele) =>
+                        <li onClick={() => onClickMenu(ele)} >{ele}</li>
+                    )
+                }
             </ul>
         </div>
     );
