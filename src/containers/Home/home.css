@@ -210,14 +210,15 @@
 
 .about-me-section-2 {
     color: #fff;
-    flex: 1;
-    width: 100%;
+    /* flex: 1; */
+    width: 32%;
 }
 
 .about-me-image {
     width: 80%;
     height: 90%;
     border-radius: 10px;
+    float: right;
 }
 
 .about-me-title {
@@ -277,7 +278,8 @@
 
 .services-card-parent {
     height: 100%;
-    box-shadow: 0 8px 16px #d220201a;
+    /* box-shadow: 0 8px 16px #d220201a;
+    background-color: #3a2c2c; */
 }
 
 @media (min-width: 1900px) and (max-width: 2000px) {
@@ -449,6 +451,10 @@
     .download-cv {
         width: 25%;
     }
+
+    .about-me-image {
+        height: 100%;
+    }
 }
 
 @media (min-width: 1100px) and (max-width: 1200px) {
@@ -542,8 +548,8 @@
     }
 
     .about-me-image {
-        height: 100%;
-        width: 82%;
+        /* height: 100%; */
+        width: 97%;
     }
 }
 
@@ -1309,5 +1315,9 @@
 
     .about-me-parent {
         height: 30rem;
+    }
+
+    .cards-parent-container {
+        grid-template-columns: repeat(2, 1fr)
     }
 }
