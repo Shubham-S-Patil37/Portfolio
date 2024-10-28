@@ -1,13 +1,14 @@
 import { useRef, useState } from 'react'
 import Typewriter from 'typewriter-effect';
-import { faGithub, faLinkedin, faConnectdevelop, faPhoenixFramework, faCloudflare } from '@fortawesome/free-brands-svg-icons';
-import { faPersonWalking, faUsers, faFeather, faChalkboard, faDoorOpen, faExplosion } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin, faConnectdevelop, faPhoenixFramework, faCloudflare, faHtml5, faReact, faNodeJs, faPython, faCss3Alt, faJava } from '@fortawesome/free-brands-svg-icons';
+import { faPersonWalking, faUsers, faFeather, faChalkboard, faDoorOpen, faExplosion, faDatabase, faScroll } from '@fortawesome/free-solid-svg-icons';
 import { faChessQueen } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 import Nav from "./../../components/Nav/index"
-import Card from '../../components/cards';
+import Card from '../../components/cards/index';
+import ContactUS from '../../components/contactUS/index';
 import homeBG from "../../assets/slider-bg.jpg"
 import profile from "../../assets/profile2.png"
 
@@ -50,11 +51,14 @@ const Home = () => {
     ]
 
     const skillSet = [
-        { "Name": "React JS", "Completed": "50" },
-        { "Name": "Node JS", "Completed": "80" },
-        { "Name": "Python", "Completed": "70" },
-        { "Name": "HTML", "Completed": "90" },
-        { "Name": "CSS", "Completed": "40" },
+        { "Name": "React JS", "Completed": "50", "icon": faReact, "exp": 2 },
+        { "Name": "Node JS", "Completed": "80", "icon": faNodeJs, "exp": 2 },
+        { "Name": "Python", "Completed": "70", "icon": faPython, "exp": 2 },
+        { "Name": "Express JS", "Completed": "70", "icon": faScroll, "exp": 2 },
+        { "Name": "Mongo DB", "Completed": "70", "icon": faDatabase, "exp": 2 },
+        { "Name": "JAVA", "Completed": "70", "icon": faJava, "exp": 2 },
+        { "Name": "HTML", "Completed": "90", "icon": faHtml5, "exp": 2 },
+        { "Name": "CSS", "Completed": "40", "icon": faCss3Alt, "exp": 2 },
     ]
 
     const onClickSocialMediaIcon = (url) => {
@@ -124,7 +128,6 @@ const Home = () => {
                             <img src={profile} alt="Background" />
                         </div>
                     </div>
-
                 </div>
 
                 <div>
@@ -207,10 +210,17 @@ const Home = () => {
                 <div className='cards-parent-container'>
                     {
                         skillSet.map((ele) =>
-                            <Card title={ele.Name} completed={ele.Completed} />
+                            <div className='services-card-parent'>
+                                <Card title={ele.Name} completed={ele.Completed} icon={ele.icon} exp={ele.exp} />
+                            </div>
                         )
                     }
                 </div>
+            </div>
+
+            {/* ********************************************************************** Contact US ********************************************************************** */}
+            <div ref={contactUsRef}>
+                <ContactUS />
             </div>
         </div>
     )

@@ -1,9 +1,14 @@
 .card-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     height: 100% !important;
     width: 100% !important;
     /* background-color: #2C2D32; */
-    background-color: #1d1d1d;
+    background-color: #353535;
     padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px #d220201a;
 }
 
 .title {
@@ -11,7 +16,23 @@
     color: antiquewhite;
 }
 
+.sub-title {
+    font-size: 1rem;
+    color: #808080;
+}
+
 .progress-bar-parent {
     width: 100%;
     height: 20px;
+}
+
+.icon {
+    color: #fff;
+    height: 100%;
+    /* width: 100%; */
+}
+
+.icon-parent {
+    height: 20%;
+    width: 20%;
 }
