@@ -278,8 +278,8 @@
 
 .services-card-parent {
     height: 100%;
-    box-shadow: 0 8px 16px #d220201a;
-    background-color: #3a2c2c;
+    /* box-shadow: 0 8px 16px #d220201a;
+    background-color: #3a2c2c; */
 }
 
 @media (min-width: 1900px) and (max-width: 2000px) {
