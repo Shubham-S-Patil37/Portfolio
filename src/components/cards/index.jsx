@@ -10,7 +10,7 @@ const Card = ({ title, completed, icon, exp }) => {
     return (
         <div className="card-parent">
             <div className='icon-parent'>
-                <FontAwesomeIcon icon={icon} className='icon' />
+                <FontAwesomeIcon icon={icon} className='icon' style={{ color: "#F0BF55" }} />
             </div>
             <div>
                 <div className='title'>{title}</div>

@@ -28,6 +28,7 @@
     justify-content: end;
 }
 
+
 .social-icon-parent {
     display: flex;
     /* gap: 35px; */
@@ -134,7 +135,7 @@
     display: flex;
     /* justify-content: center;
     align-items: center; */
-    height: 100%;
+    height: 50%;
 }
 
 .service-section-1 {
@@ -167,7 +168,7 @@
 .service-item-parent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 25px;
     padding: 25px;
 }
 
@@ -187,7 +188,7 @@
     margin-top: 0;
     /* padding: 20px; */
     width: 100%;
-    height: 40rem;
+    height: 35rem;
     background-color: #EFEFEF;
 }
 
@@ -253,7 +254,6 @@
     padding: 0;
 }
 
-
 .about-me-user-info-key {
     /* font-size: 20px;
     font-weight: bold; */
@@ -277,9 +277,7 @@
 }
 
 .services-card-parent {
-    height: 100%;
-    /* box-shadow: 0 8px 16px #d220201a;
-    background-color: #3a2c2c; */
+    height: 85%;
 }
 
 @media (min-width: 1900px) and (max-width: 2000px) {
@@ -363,7 +361,14 @@
 
     .about-container {
         padding: 2%;
-        ;
+    }
+
+    .about-me-image {
+        height: 100%;
+    }
+
+    .about-me-parent {
+        height: 36rem;
     }
 }
 
@@ -506,8 +511,9 @@
     }
 
     .home-container {
-        padding: 14px;
-        top: 10%;
+        padding: 65px;
+        top: 7%;
+        width: 100%;
     }
 
     .social-icon-parent {
@@ -548,8 +554,12 @@
     }
 
     .about-me-image {
-        /* height: 100%; */
+        height: 100%;
         width: 97%;
+    }
+
+    .about-me-parent {
+        height: 31rem;
     }
 }
 
@@ -563,8 +573,9 @@
     }
 
     .home-container {
-        padding: 22px;
-        top: 10%;
+        padding: 60px;
+        top: 5%;
+        width: 100%;
     }
 
     .social-icon-parent {
@@ -603,6 +614,10 @@
         width: 100%;
         height: 92%;
     }
+
+    .about-me-parent {
+        height: 35rem;
+    }
 }
 
 @media (min-width: 800px) and (max-width: 900px) {
@@ -613,11 +628,12 @@
     .home-container {
         padding: 14px;
         top: 10%;
-
+        width: 100%;
     }
 
     .social-icon-parent {
         margin-top: 0;
+        gap: 20px;
     }
 
     .menu-parent {
@@ -637,7 +653,7 @@
     }
 
     .dev-title-3 {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     .download-cv {
@@ -702,6 +718,15 @@
         width: 100%;
         height: 100%;
     }
+
+    .about-me-user-info-container {
+        font-size: 0.7rem;
+        width: 100%;
+    }
+
+    .about-me-parent {
+        height: 30rem;
+    }
 }
 
 @media (min-width: 700px) and (max-width: 800px) {
@@ -712,7 +737,7 @@
     .home-container {
         padding: 14px;
         top: 10%;
-
+        width: 100%;
     }
 
     .home-section-1 {
@@ -827,7 +852,6 @@
     }
 
     .about-me-user-info-container {
-        /* gap: 10%; */
         font-size: 0.7rem;
         width: 100%;
     }
@@ -916,6 +940,7 @@
     }
 
     .home-container {
+        width: 100%;
         padding: 13px;
         top: 10%;
     }
@@ -942,11 +967,11 @@
     }
 
     .dev-title-3 {
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .download-cv {
-        width: 40%;
+        width: 60%;
     }
 
     .home-card-parent {
@@ -1055,6 +1080,7 @@
     .home-container {
         padding: 8px;
         top: 10%;
+        width: 100%;
     }
 
     .social-icon-parent {
@@ -1079,11 +1105,11 @@
     }
 
     .dev-title-3 {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .download-cv {
-        width: 50%;
+        width: 65%;
     }
 
     .home-card-parent {
@@ -1178,6 +1204,14 @@
         font-size: 0.7rem;
         width: 100%;
     }
+
+    .services-card-parent {
+        height: 100%;
+    }
+
+    .cards-parent-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 300px) and (max-width: 400px) {
@@ -1192,6 +1226,7 @@
     .home-container {
         padding: 8px;
         top: 10%;
+        width: 100%;
     }
 
     .social-icon-parent {
@@ -1207,6 +1242,19 @@
         flex: 1;
     }
 
+    .home-section-1 {
+        flex: 2;
+    }
+
+    .home-section-2 {
+        flex: 1;
+    }
+
+    .home-profile {
+        height: 100%;
+        width: 100%;
+    }
+
     .dev-title-1 {
         font-size: 14px;
     }
@@ -1216,12 +1264,12 @@
     }
 
     .dev-title-3 {
-        font-size: 9px;
+        font-size: 12px;
         gap: 5px;
     }
 
     .download-cv {
-        width: 65%;
+        width: 60%;
     }
 
     .home-card-parent {
@@ -1319,5 +1367,9 @@
 
     .cards-parent-container {
         grid-template-columns: repeat(2, 1fr)
+    }
+
+    .services-card-parent {
+        height: 100%;
     }
 }

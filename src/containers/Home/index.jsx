@@ -125,38 +125,37 @@ const Home = () => {
                             </div>
                         </div>
                         <div className='home-section-2'>
-                            <img src={profile} alt="Background" />
+                            <img src={profile} alt="Background" className='home-profile' />
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <div className='service-parent'>
-                        <div className='service-section-1'>
-                            <img src={myServiceImage} style={{ height: "100%", width: '85%' }} />
+                <div className='service-parent'>
+                    <div className='service-section-1'>
+                        <img src={myServiceImage} style={{ height: "100%", width: '85%' }} />
+                    </div>
+                    <div className='service-section-2'>
+                        <div className='service-section-2-title' >What kind of services i provides</div>
+                        <div className='service-section-2-description'>
+                            I offer innovative digital solutions tailored to meet business needs, ensuring high performance, security, and seamless user experiences. My services focus on delivering scalable, efficient, and modern technology solutions with precision and creativity.
                         </div>
-                        <div className='service-section-2'>
-                            <div className='service-section-2-title' >What kind of services i provides</div>
-                            <div className='service-section-2-description'>
-                                I offer innovative digital solutions tailored to meet business needs, ensuring high performance, security, and seamless user experiences. My services focus on delivering scalable, efficient, and modern technology solutions with precision and creativity.
-                            </div>
 
-                            <div className='service-item-parent'>
+                        <div className='service-item-parent'>
 
-                                {
-                                    myServiceInfo.map((ele) =>
-                                        <span className='service-item'>
-                                            <FontAwesomeIcon icon={ele.icon} />
-                                            {/* <img src={ele.icon} alt="Background" className='service-item-icon' /> */}
-                                            <div>{ele.title}</div>
-                                        </span>
-                                    )
-                                }
+                            {
+                                myServiceInfo.map((ele) =>
+                                    <span className='service-item'>
+                                        <FontAwesomeIcon icon={ele.icon} />
+                                        {/* <img src={ele.icon} alt="Background" className='service-item-icon' /> */}
+                                        <div>{ele.title}</div>
+                                    </span>
+                                )
+                            }
 
-                            </div>
                         </div>
                     </div>
                 </div>
+
 
             </div>
             {/* ********************************************************************** ABOUT ME ********************************************************************** */}
