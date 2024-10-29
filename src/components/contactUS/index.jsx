@@ -31,7 +31,7 @@ const ContactUS = () => {
                     <label className='title-lab' >Contact Us</label>
                     <input className='input-field' type="text" name="name" placeholder="Name" required value={name} onChange={(e) => { setName(e.target.value) }} /><br />
                     <input className='input-field' type="email" name="email" placeholder="Email Address" required value={emailAddress} onChange={(e) => { setEmailAddress(e.target.value) }} /><br />
-                    <input className='input-field' type="mobile_number" name="mobile_number" placeholder="Mobile Number" required value={mbNo} onChange={onMobileNumberChange} maxLength="10" /><br />
+                    <input className='input-field' type="tel" name="tel" placeholder="Mobile Number" required value={mbNo} onChange={onMobileNumberChange} maxLength="10" /><br />
                     <textarea className='input-field input-field-text-area' name="message" placeholder="Message" required value={msg} onChange={(e) => { setMsg(e.target.value) }}></textarea><br />
                     <button className='submit-btn' type="submit" value="Submit" > Send Message </button>
                 </form>

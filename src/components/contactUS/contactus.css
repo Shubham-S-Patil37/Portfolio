@@ -29,6 +29,7 @@
     position: absolute;
     right: 0;
     height: 100%;
+    width: 100%;
 }
 
 .input-field {
@@ -109,6 +110,67 @@ form {
     color: #7b7b7b !important;
 }
 
+@media (min-width: 1900px) and (max-width: 2000px) {
+    .section-img {
+        width: 70%;
+        right: 10%;
+    }
+
+    .input-field {
+        height: 7%;
+    }
+
+    .input-field-text-area {
+        height: 23%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+    .submit-btn {
+        width: 60%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+    .contact-us-parent {
+        height: 52rem;
+        flex-direction: column;
+    }
+
+    .section-1 {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-2 {
+        height: 62%;
+        width: 100%;
+    }
+
+    .section-img {
+        right: auto;
+        width: 55%;
+    }
+
+    .submit-btn {
+        width: 50%;
+    }
+
+    .input-field {
+        height: 7%;
+    }
+
+    .input-field-text-area {
+        height: 20%;
+    }
+
+    form {
+        gap: 7px;
+        padding-top: 0;
+    }
+}
 
 @media (min-width: 400px) and (max-width: 500px) {
     .card-parent {
@@ -122,6 +184,45 @@ form {
 
     .title {
         font-size: 1rem;
+    }
+
+    .contact-us-parent {
+        height: 52rem;
+        flex-direction: column;
+    }
+
+    .section-1 {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-2 {
+        height: 62%;
+        width: 100%;
+    }
+
+    .section-img {
+        right: auto;
+        width: 75%;
+    }
+
+    .submit-btn {
+        width: 50%;
+    }
+
+    .input-field {
+        height: 7%;
+    }
+
+    .input-field-text-area {
+        height: 20%;
+    }
+
+    form {
+        gap: 7px;
+        padding-top: 0;
     }
 
 }
@@ -140,4 +241,41 @@ form {
         font-size: 1.3rem;
     }
 
+    .contact-us-parent {
+        height: 52rem;
+        flex-direction: column;
+    }
+
+    .section-1 {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-2 {
+        height: 62%;
+        width: 100%;
+    }
+
+    .section-img {
+        right: auto;
+    }
+
+    .submit-btn {
+        width: 50%;
+    }
+
+    .input-field {
+        height: 7%;
+    }
+
+    .input-field-text-area {
+        height: 20%;
+    }
+
+    form {
+        gap: 7px;
+        padding-top: 0;
+    }
 }

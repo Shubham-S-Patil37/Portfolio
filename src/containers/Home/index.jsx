@@ -51,12 +51,12 @@ const Home = () => {
     ]
 
     const skillSet = [
-        { "Name": "React JS", "Completed": "50", "icon": faReact, "exp": 2 },
+        { "Name": "React JS", "Completed": "50", "icon": faReact, "exp": 1.5 },
         { "Name": "Node JS", "Completed": "80", "icon": faNodeJs, "exp": 2 },
         { "Name": "Python", "Completed": "70", "icon": faPython, "exp": 2 },
         { "Name": "Express JS", "Completed": "70", "icon": faScroll, "exp": 2 },
-        { "Name": "Mongo DB", "Completed": "70", "icon": faDatabase, "exp": 2 },
-        { "Name": "JAVA", "Completed": "70", "icon": faJava, "exp": 2 },
+        { "Name": "Mongo DB", "Completed": "70", "icon": faDatabase, "exp": 1 },
+        { "Name": "JAVA", "Completed": "70", "icon": faJava, "exp": 0.5 },
         { "Name": "HTML", "Completed": "90", "icon": faHtml5, "exp": 2 },
         { "Name": "CSS", "Completed": "40", "icon": faCss3Alt, "exp": 2 },
     ]
