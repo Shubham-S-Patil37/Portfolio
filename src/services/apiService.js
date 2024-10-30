@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:5000"
+const baseUrl = "https://python-backend2.onrender.com"
 const apiService = {
 
     sendEmail: async function (params) {
