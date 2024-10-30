@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import contact_us from "../../assets/contact-us.jpeg"
+import apiService from "./../../services/apiService";
 
 import "./contactus.css"
 
@@ -11,8 +12,20 @@ const ContactUS = () => {
     const [msg, setMsg] = useState("");
     const [mbNo, setMbNo] = useState("");
 
-    const onSubmit = () => {
-        alert("Form submitted successfully   " + name + emailAddress + msg);
+    const onSubmit = (event) => {
+        event.preventDefault();
+        const data = {
+            "userName": name,
+            "receiverEmail": emailAddress,
+            "userContactNumber": mbNo,
+            "message": msg
+        }
+        apiService.sendEmail(data)
+
+        setName("")
+        setEmailAddress("")
+        setMsg("")
+        setMbNo("")
     }
 
     const onMobileNumberChange = (event) => {

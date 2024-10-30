@@ -138,6 +138,19 @@
     height: 50%;
 }
 
+.services_heading {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 4%;
+    /* padding-top: 1.8%; */
+    font: 1.4rem "Fira Sans", sans-serif;
+    font-weight: 300;
+    color: rgb(3, 166, 3);
+    /* border radius */
+    letter-spacing: 4px;
+}
+
 .service-section-1 {
     height: 100%;
     display: flex;

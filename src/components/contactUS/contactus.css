@@ -33,12 +33,18 @@
 }
 
 .input-field {
-    height: 5%;
+    font: 0.8rem "Fira Sans", sans-serif;
+    height: 6%;
+    padding: 3%;
     width: 100%;
     outline: none;
     background-color: #222222;
     border: none;
     color: #7b7b7b;
+    /* border radius */
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
 
 .input-field:focus {

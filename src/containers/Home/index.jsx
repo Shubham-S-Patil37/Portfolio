@@ -206,6 +206,7 @@ const Home = () => {
             </div>
             {/* ********************************************************************** Services ********************************************************************** */}
             <div ref={servicesRef} className='services-parent'>
+                <h1 className='services_heading'>What I Bring to the Table</h1>
                 <div className='cards-parent-container'>
                     {
                         skillSet.map((ele) =>
