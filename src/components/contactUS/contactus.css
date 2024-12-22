@@ -135,6 +135,25 @@ form {
     .submit-btn {
         width: 60%;
     }
+
+    form {
+        height: 100%;
+        gap: 5px;
+        width: 80%;
+        padding-top: 1.5rem;
+    }
+
+    .input-field-text-area {
+        height: 15%;
+    }
+
+    .contact-us-parent {
+        height: 45rem;
+    }
+
+    .section-1 {
+        height: 80%;
+    }
 }
 
 @media (min-width: 500px) and (max-width: 600px) {
@@ -266,6 +285,7 @@ form {
 
     .section-img {
         right: auto;
+        width: 80%;
     }
 
     .submit-btn {

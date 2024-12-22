@@ -2,7 +2,10 @@
     margin-top: 0;
     width: 100%;
     height: 80rem;
-    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-container {
@@ -293,6 +296,8 @@
     height: 85%;
 }
 
+
+
 @media (min-width: 1900px) and (max-width: 2000px) {
     .home-parent {
         height: 100rem;
@@ -435,7 +440,7 @@
 
     .home-container {
         padding: 14px;
-        top: 20%;
+        top: 8%;
     }
 
     .social-icon-parent {
@@ -641,7 +646,7 @@
     .home-container {
         padding: 14px;
         top: 10%;
-        width: 100%;
+        width: 90%;
     }
 
     .social-icon-parent {
@@ -666,11 +671,11 @@
     }
 
     .dev-title-3 {
-        font-size: 23px;
+        font-size: 20px;
     }
 
     .download-cv {
-        width: 30%;
+        width: 55%;
     }
 
     .home-card-parent {
@@ -740,6 +745,11 @@
     .about-me-parent {
         height: 30rem;
     }
+
+    .home-profile {
+        width: 70%;
+        height: 85%;
+    }
 }
 
 @media (min-width: 700px) and (max-width: 800px) {
@@ -749,7 +759,7 @@
 
     .home-container {
         padding: 14px;
-        top: 10%;
+        top: 7%;
         width: 100%;
     }
 
@@ -866,6 +876,14 @@
 
     .about-me-user-info-container {
         font-size: 0.7rem;
+        width: 100%;
+    }
+
+    .submit-btn {
+        width: 60%;
+    }
+
+    .home-profile {
         width: 100%;
     }
 }
@@ -1087,7 +1105,7 @@
     }
 
     .img-wrapper {
-        height: 40%;
+        height: 43%;
     }
 
     .home-container {
@@ -1225,6 +1243,11 @@
     .cards-parent-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .home-profile {
+        width: 80%;
+        height: 80%;
+    }
 }
 
 @media (min-width: 300px) and (max-width: 400px) {
@@ -1233,7 +1256,7 @@
     }
 
     .img-wrapper {
-        height: 40%;
+        height: 42%;
     }
 
     .home-container {

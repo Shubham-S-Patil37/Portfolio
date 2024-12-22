@@ -10,7 +10,7 @@ import Nav from "./../../components/Nav/index"
 import Card from '../../components/cards/index';
 import ContactUS from '../../components/contactUS/index';
 import homeBG from "../../assets/slider-bg.jpg"
-import profile from "../../assets/profile2.png"
+import profile from "../../assets/profile3.png"
 
 import myServiceImage from "../../assets/serive_back1.png"
 import aboutMe from "../../assets/aboutme.jpg"
