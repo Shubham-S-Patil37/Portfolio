@@ -10,10 +10,10 @@ import Nav from "./../../components/Nav/index"
 import Card from '../../components/cards/index';
 import ContactUS from '../../components/contactUS/index';
 import homeBG from "../../assets/slider-bg.jpg"
-import profile from "../../assets/profile3.png"
+import profile from "../../assets/profile5.png"
 
 import myServiceImage from "../../assets/serive_back1.png"
-import aboutMe from "../../assets/aboutme.jpg"
+import aboutMe from "../../assets/aboutme.png"
 
 import cv from "../../assets/Shubham_Patil Resume.pdf"
 
@@ -51,12 +51,13 @@ const Home = () => {
     ]
 
     const skillSet = [
-        { "Name": "React JS", "Completed": "50", "icon": faReact, "exp": 1.5 },
-        { "Name": "Node JS", "Completed": "80", "icon": faNodeJs, "exp": 2 },
-        { "Name": "Python", "Completed": "70", "icon": faPython, "exp": 2 },
+        { "Name": "React JS", "Completed": "70", "icon": faReact, "exp": 2 },
+        { "Name": "Node JS", "Completed": "80", "icon": faNodeJs, "exp": 3 },
+        { "Name": "Python", "Completed": "80", "icon": faPython, "exp": 3 },
         { "Name": "Express JS", "Completed": "70", "icon": faScroll, "exp": 2 },
-        { "Name": "Mongo DB", "Completed": "70", "icon": faDatabase, "exp": 1 },
-        { "Name": "JAVA", "Completed": "70", "icon": faJava, "exp": 0.5 },
+        { "Name": "Nest JS", "Completed": "70", "icon": faScroll, "exp": 2 },
+        { "Name": "Mongo DB", "Completed": "70", "icon": faDatabase, "exp": 2 },
+        { "Name": "JAVA", "Completed": "70", "icon": faJava, "exp": 1 },
         { "Name": "HTML", "Completed": "90", "icon": faHtml5, "exp": 2 },
         { "Name": "CSS", "Completed": "40", "icon": faCss3Alt, "exp": 2 },
     ]
@@ -91,7 +92,7 @@ const Home = () => {
                     <img src={homeBG} alt="Background" className='home-back-img' />
                 </div>
                 <div className='home-container'>
-                    <div style={{ display: "flex" }}>
+                    <div style={{ display: "flex", alignItems: "center" }}>
                         <div className='home-section-1'>
                             <div >
                                 <div className='dev-title-1'>

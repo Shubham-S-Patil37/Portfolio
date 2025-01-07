@@ -36,7 +36,7 @@
     display: flex;
     gap: 35px;
     margin-top: 4%;
-    width: 100%;
+    width: 45%;
     height: 10%;
 }
 
@@ -232,7 +232,7 @@
 }
 
 .about-me-image {
-    width: 80%;
+    width: 73.5%;
     height: 90%;
     border-radius: 10px;
     float: right;
@@ -285,7 +285,7 @@
 
 .cards-parent-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 20px;
     gap: 20px;
     height: 50%;
@@ -294,6 +294,12 @@
 
 .services-card-parent {
     height: 85%;
+}
+
+.home-profile {
+
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -472,11 +478,15 @@
     }
 
     .download-cv {
-        width: 25%;
+        width: 18%;
     }
 
     .about-me-image {
         height: 100%;
+    }
+
+    .home-profile {
+        width: 66%;
     }
 }
 
@@ -747,8 +757,7 @@
     }
 
     .home-profile {
-        width: 70%;
-        height: 85%;
+        width: 53%;
     }
 }
 
@@ -967,7 +976,7 @@
     }
 
     .img-wrapper {
-        height: 40%;
+        height: 43%;
     }
 
     .home-container {
@@ -1096,6 +1105,10 @@
         /* gap: 10%; */
         font-size: 0.7rem;
         width: 100%;
+    }
+
+    .home-profile {
+        width: 55%;
     }
 }
 
@@ -1245,18 +1258,21 @@
     }
 
     .home-profile {
-        width: 80%;
-        height: 80%;
+        width: 70%;
     }
 }
 
 @media (min-width: 300px) and (max-width: 400px) {
     .home-parent {
+        display: block;
+    }
+
+    .home-parent {
         height: 50rem;
     }
 
     .img-wrapper {
-        height: 42%;
+        height: 32%;
     }
 
     .home-container {
@@ -1304,8 +1320,13 @@
         gap: 5px;
     }
 
+    .social-icon-item {
+        width: 14%;
+    }
+
     .download-cv {
-        width: 60%;
+        font-size: 9px;
+        width: 34%;
     }
 
     .home-card-parent {
@@ -1402,7 +1423,9 @@
     }
 
     .cards-parent-container {
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
+        gap: 10px;
     }
 
     .services-card-parent {

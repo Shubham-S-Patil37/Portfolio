@@ -27,15 +27,15 @@
 
 .section-img {
     position: absolute;
-    right: 0;
+    right: 77px;
     height: 100%;
-    width: 100%;
+    width: 74%;
 }
 
 .input-field {
     font: 0.8rem "Fira Sans", sans-serif;
     height: 6%;
-    padding: 3%;
+    padding: 3.5%;
     width: 100%;
     outline: none;
     background-color: #222222;
@@ -60,7 +60,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 80%;
+    width: 67%;
     align-items: center;
     padding-top: 5rem;
 }
@@ -198,9 +198,7 @@ form {
 }
 
 @media (min-width: 400px) and (max-width: 500px) {
-    .card-parent {
-        gap: 20px;
-    }
+
 
     .icon-parent {
         height: 25%;
@@ -253,11 +251,11 @@ form {
 }
 
 @media (min-width: 300px) and (max-width: 400px) {
-    .card-parent {
+    /* /* .card-parent {
         gap: 20px;
-    }
+} */
 
-    .icon-parent {
+    */ .icon-parent {
         height: 25%;
         width: 25%;
     }
@@ -289,7 +287,8 @@ form {
     }
 
     .submit-btn {
-        width: 50%;
+        width: 58%;
+        height: 8%;
     }
 
     .input-field {
