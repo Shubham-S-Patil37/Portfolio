@@ -14,7 +14,12 @@ const Card = ({ title, completed, icon, exp }) => {
             </div>
             <div>
                 <div className='title'>{title}</div>
-                <div className='sub-title'>{exp} years of experience</div>
+                {
+                    exp ?
+                        <div className='sub-title'>{exp} years of experience</div>
+                        : <></>
+                }
+
             </div>
             <div className='progress-bar-parent'>
                 <ProgressBar completed={completed}
