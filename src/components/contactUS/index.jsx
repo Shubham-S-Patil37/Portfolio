@@ -3,7 +3,6 @@ import { useState } from 'react'
 import contact_us from "../../assets/contact-us.jpeg"
 import apiService from "./../../services/apiService";
 
-
 import "./contactus.css"
 
 const ContactUS = () => {
@@ -15,26 +14,18 @@ const ContactUS = () => {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        // const data = {
-        //     "userName": name,
-        //     "receiverEmail": emailAddress,
-        //     "userContactNumber": mbNo,
-        //     "message": msg
-        // }
-        // apiService.sendEmail(data)
+        const data = {
+            "userName": name,
+            "receiverEmail": emailAddress,
+            "userContactNumber": mbNo,
+            "message": msg
+        }
+        apiService.sendEmail(data)
 
         setName("")
         setEmailAddress("")
         setMsg("")
         setMbNo("")
-        const siteUrl = "https://sp37.vercel.app/"
-
-        const message = `🌟 *Hi ,* 🌟\n\n📌 *Contact Details:*\n👤 *Name:* ${name}\n✉️ *Email:* ${emailAddress}\n📞 *Contact:* ${mbNo}\n\n📝 *Message:*\n ${msg}\n\n🔗 Visit me: ${siteUrl}`;
-
-        const phone = "+919960262933";
-        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-        window.open(url, "_blank");
     }
 
     const onMobileNumberChange = (event) => {
