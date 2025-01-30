@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Typewriter from 'typewriter-effect';
 import { faGithub, faLinkedin, faConnectdevelop, faPhoenixFramework, faCloudflare, faHtml5, faReact, faNodeJs, faPython, faCss3Alt, faJava } from '@fortawesome/free-brands-svg-icons';
 import { faPersonWalking, faUsers, faFeather, faChalkboard, faDoorOpen, faExplosion, faDatabase, faScroll } from '@fortawesome/free-solid-svg-icons';
@@ -10,12 +10,19 @@ import Nav from "./../../components/Nav/index"
 import Card from '../../components/cards/index';
 import ContactUS from '../../components/contactUS/index';
 import homeBG from "../../assets/slider-bg.jpg"
-import profile from "../../assets/profile5.png"
+
 
 import myServiceImage from "../../assets/serive_back1.png"
-import aboutMe from "../../assets/aboutme.png"
 
-import cv from "../../assets/Shubham_Patil Resume.pdf"
+
+// ********************************************** Shubham **********************************************
+import shubhamCV from "../../assets/Shubham_Patil Resume.pdf"
+import shubhamProfile from "../../assets/profile5.png"
+import shubham_aboutme from "../../assets/shubham_aboutme.png"
+// ********************************************** Vinit **********************************************
+import vinitCv from "../../assets/vinit_resume.pdf"
+import vinitProfile from "../../assets/vinit_profile.jpg"
+import vinit_aboutme from "../../assets/vinit_aboutme.jpg"
 
 import "../Home/home.css"
 
@@ -27,11 +34,44 @@ const Home = () => {
     const servicesRef = useRef(null);
     const contactUsRef = useRef(null);
 
+
+    const assetPath = "../../assets/"
+
+    const [userDetails, setUserDetails] = useState({})
+
     const socialMedia = [
-        { "Name": "Github", "icon": faGithub, "url": "https://github.com/Shubham-S-Patil37" },
-        { "Name": "Linkedin", "icon": faLinkedin, "url": "https://github.com/Shubham-S-Patil37" },
-        // { "Name": "Instagram", "icon": faGithub, "url": "https://github.com/Shubham-S-Patil37" },
+        { "Name": "Github", "icon": faGithub, "url": "https://github.com/Shubham-S-Patil37", "user": "Shubham Patil" },
+        { "Name": "Linkedin", "icon": faLinkedin, "url": "https://github.com/Shubham-S-Patil37", "user": "Shubham Patil" },
+        { "Name": "Github", "icon": faGithub, "url": "https://github.com/Vinit-S-Patil", "user": "Vinit Patil" },
+        { "Name": "Linkedin", "icon": faLinkedin, "url": "https://www.linkedin.com/in/vinit-s-patil/", "user": "Vinit Patil" },
     ]
+
+    useEffect(() => {
+
+        const name = import.meta.env.VITE_DEVELOPER_NAME
+
+        const mediaLink = socialMedia.filter(ele => ele.user === name)
+
+        const userObject = {
+            name: name ? name : "Shubham Patil",
+            resumeFile: name === "Shubham Patil" ? shubhamCV : vinitCv,
+            profile: name === "Shubham Patil" ? shubhamProfile : vinitProfile,
+            socialMedia: mediaLink ? mediaLink : [],
+            contactNumber: import.meta.env.VITE_DEVELOPER_CONTACT_NUMBER,
+            email: import.meta.env.VITE_DEVELOPER_EMAIL,
+            age: import.meta.env.VITE_DEVELOPER_AGE,
+            designation: import.meta.env.VITE_DEVELOPER_DESIGNATION,
+            aboutMeImage: name === "Shubham Patil" ? shubham_aboutme : vinit_aboutme,
+            skillSet: name === "Shubham Patil" ? shubhamSkillSet : vinitSkillSet
+        }
+
+        setUserDetails(userObject)
+
+    }, []);
+
+    console.log("///////////////////////////////////////////////////")
+    console.log(userDetails)
+
 
     const homeIntoCard = [
         { "icon": faConnectdevelop, "title": "Technology", "description": "Experienced in a diverse range of technologies, including front-end and back-end development, ensuring seamless integration, scalable solutions, and optimal performance." },
@@ -50,7 +90,7 @@ const Home = () => {
         { "icon": faExplosion, "title": "Performance Optimization" },
     ]
 
-    const skillSet = [
+    const shubhamSkillSet = [
         { "Name": "React JS", "Completed": "70", "icon": faReact, "exp": 2 },
         { "Name": "Node JS", "Completed": "80", "icon": faNodeJs, "exp": 3 },
         { "Name": "Python", "Completed": "80", "icon": faPython, "exp": 3 },
@@ -60,6 +100,18 @@ const Home = () => {
         { "Name": "JAVA", "Completed": "70", "icon": faJava, "exp": 1 },
         { "Name": "HTML", "Completed": "90", "icon": faHtml5, "exp": 2 },
         { "Name": "CSS", "Completed": "40", "icon": faCss3Alt, "exp": 2 },
+    ]
+
+    const vinitSkillSet = [
+        { "Name": "React JS", "Completed": "70", "icon": faReact, },
+        { "Name": "Node JS", "Completed": "80", "icon": faNodeJs, },
+        { "Name": "Python", "Completed": "80", "icon": faPython, },
+        { "Name": "Express JS", "Completed": "70", "icon": faScroll, },
+        { "Name": "Redux", "Completed": "70", "icon": faScroll, },
+        { "Name": "Mongo DB", "Completed": "70", "icon": faDatabase, },
+        { "Name": "Tailwind CSS", "Completed": "70", "icon": faJava, },
+        { "Name": "HTML", "Completed": "90", "icon": faHtml5, },
+        { "Name": "CSS", "Completed": "40", "icon": faCss3Alt, },
     ]
 
     const onClickSocialMediaIcon = (url) => {
@@ -99,7 +151,8 @@ const Home = () => {
                                     Hello I' M
                                 </div>
                                 <div className='dev-title-2'>
-                                    Shubham Patil
+                                    {/* {Shubham Patil} */}
+                                    {userDetails.name}
                                 </div>
                                 <div className='dev-title-3'>
                                     <span> A passionate </span>
@@ -114,26 +167,29 @@ const Home = () => {
 
                             <div className='social-icon-parent'>
                                 {
-                                    socialMedia.map((ele) =>
-                                        <FontAwesomeIcon icon={ele.icon} className='social-icon-item' onClick={() => { onClickSocialMediaIcon(ele.url) }} />
-                                    )
+                                    userDetails.socialMedia && userDetails.socialMedia.length > 0 ?
+                                        userDetails.socialMedia.map((ele) =>
+                                            <FontAwesomeIcon icon={ele.icon} className='social-icon-item' onClick={() => { onClickSocialMediaIcon(ele.url) }} />
+                                        )
+                                        : <></>
                                 }
                             </div>
                             <div >
-                                <a href={cv} download="Shubham_CV.pdf" >
+                                <a href={userDetails.resumeFile} download={`${name}_Resume.pdf`} >
                                     <button className='download-cv' onClick={onClickDownloadCV} >Download CV</button>
                                 </a>
                             </div>
                         </div>
                         <div className='home-section-2'>
-                            <img src={profile} alt="Background" className='home-profile' />
+                            <img src={userDetails.profile} alt="Background" className='home-profile' />
                         </div>
                     </div>
                 </div>
 
                 <div className='service-parent'>
                     <div className='service-section-1'>
-                        <img src={myServiceImage} style={{ height: "100%", width: '85%' }} />
+                        {/* <img src={myServiceImage} style={{ height: "100%", width: '85%' }} /> */}
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=665055069984128320" height="438" width="450" frameborder="0" scrolling="no" ></iframe>
                     </div>
                     <div className='service-section-2'>
                         <div className='service-section-2-title' >What kind of services i provides</div>
@@ -180,9 +236,9 @@ const Home = () => {
                                     <p>Designation</p>
                                 </li>
                                 <li>
-                                    <p>Shubham S Patil</p>
-                                    <p>26 Years</p>
-                                    <p>Software Developer</p>
+                                    <p>{userDetails.name}</p>
+                                    <p>{userDetails.age} Years</p>
+                                    <p>{userDetails.designation}</p>
                                 </li>
                             </ul>
 
@@ -193,15 +249,15 @@ const Home = () => {
                                     <p>Course</p>
                                 </li>
                                 <li>
-                                    <p>+91 996 026 2933</p>
-                                    <p>patilshubham373737@gmail.com</p>
+                                    <p>{userDetails.contactNumber}</p>
+                                    <p>{userDetails.email}</p>
                                     <p>B. Tech</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div className='about-me-section-2'>
-                        <img src={aboutMe} className='about-me-image' />
+                        <img src={userDetails.aboutMeImage} className='about-me-image' />
                     </div>
                 </div>
             </div>
@@ -210,11 +266,13 @@ const Home = () => {
                 <h1 className='services_heading'>What I Bring to the Table</h1>
                 <div className='cards-parent-container'>
                     {
-                        skillSet.map((ele) =>
-                            <div className='services-card-parent'>
-                                <Card title={ele.Name} completed={ele.Completed} icon={ele.icon} exp={ele.exp} />
-                            </div>
-                        )
+                        userDetails.skillSet && userDetails.skillSet.length > 0 ?
+                            userDetails.skillSet.map((ele) =>
+                                <div className='services-card-parent'>
+                                    <Card title={ele.Name} completed={ele.Completed} icon={ele.icon} exp={ele.exp} />
+                                </div>
+                            )
+                            : <></>
                     }
                 </div>
             </div>
