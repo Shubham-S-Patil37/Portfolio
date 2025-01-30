@@ -188,7 +188,8 @@ const Home = () => {
 
                 <div className='service-parent'>
                     <div className='service-section-1'>
-                        <img src={myServiceImage} style={{ height: "100%", width: '85%' }} />
+                        {/* <img src={myServiceImage} style={{ height: "100%", width: '85%' }} /> */}
+                        <iframe src="https://assets.pinterest.com/ext/embed.html?id=665055069984128320" height="438" width="450" frameborder="0" scrolling="no" ></iframe>
                     </div>
                     <div className='service-section-2'>
                         <div className='service-section-2-title' >What kind of services i provides</div>
