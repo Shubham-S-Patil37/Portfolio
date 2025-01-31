@@ -12,7 +12,7 @@ import ContactUS from '../../components/contactUS/index';
 import homeBG from "../../assets/slider-bg.jpg"
 import profile from "../../assets/profile5.png"
 
-import myServiceImage from "../../assets/serive_back1.png"
+import myServiceImage from "../../assets/serive_back2.gif"
 import aboutMe from "../../assets/aboutme.png"
 
 import cv from "../../assets/Shubham_Patil Resume.pdf"
