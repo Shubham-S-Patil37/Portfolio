@@ -14,14 +14,6 @@ const ContactUS = () => {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        // const data = {
-        //     "userName": name,
-        //     "receiverEmail": emailAddress,
-        //     "userContactNumber": mbNo,
-        //     "message": msg
-        // }
-        // apiService.sendEmail(data)
-
         setName("")
         setEmailAddress("")
         setMsg("")

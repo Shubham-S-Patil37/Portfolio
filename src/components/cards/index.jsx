@@ -17,13 +17,7 @@ const Card = ({ title, completed, icon, exp }) => {
                 <div className='sub-title'>{exp} years of experience</div>
             </div>
             <div className='progress-bar-parent'>
-                <ProgressBar completed={completed}
-                    bgColor="#F0BF55"
-                    isLabelVisible={false}
-                    className='wrapper'
-                    height='1vh'
-                    width='100%'
-                />
+                <ProgressBar completed={completed} bgColor="#F0BF55" isLabelVisible={false} className='wrapper' height='1vh' width='100%' />
             </div>
         </div>
     )
