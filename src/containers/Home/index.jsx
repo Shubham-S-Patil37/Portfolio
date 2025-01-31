@@ -62,13 +62,9 @@ const Home = () => {
         { "Name": "CSS", "Completed": "40", "icon": faCss3Alt, "exp": 2 },
     ]
 
-    const onClickSocialMediaIcon = (url) => {
-        window.open(url, "_blank");
-    }
+    const onClickSocialMediaIcon = (url) => { window.open(url, "_blank"); }
 
-    const onClickDownloadCV = () => {
-        window.open(url, "_blank");
-    }
+    const onClickDownloadCV = () => { window.open(url, "_blank"); }
 
     const onClickMenu = (menuName) => {
         if (menuName == "Home")
