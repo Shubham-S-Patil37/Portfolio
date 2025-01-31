@@ -14,23 +14,7 @@ const ContactUS = () => {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        setName("")
-        setEmailAddress("")
-        setMsg("")
-        setMbNo("")
-
-        setName("")
-        setEmailAddress("")
-        setMsg("")
-        setMbNo("")
-        const siteUrl = "https://sp37.vercel.app/"
-
-        const message = `🌟 *Hi ,* 🌟\n\n📌 *Contact Details:*\n👤 *Name:* ${name}\n✉️ *Email:* ${emailAddress}\n📞 *Contact:* ${mbNo}\n\n📝 *Message:*\n ${msg}\n\n🔗 Visit me: ${siteUrl}`;
-
-        const phone = "+919960262933";
-        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-        window.open(url, "_blank");
+        debugger
     }
 
     const onMobileNumberChange = (event) => {
