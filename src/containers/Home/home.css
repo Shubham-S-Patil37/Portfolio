@@ -34,8 +34,10 @@
 
 .home-section-2 {
     flex: 1;
+    display: flex;
     position: relative;
     overflow: hidden;
+    justify-content: center;
 }
 
 .home-profile {
