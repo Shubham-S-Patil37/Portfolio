@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 import contact_us from "../../assets/contact-us.jpeg"
 import apiService from "./../../services/apiService";
@@ -43,18 +45,87 @@ const ContactUS = () => {
 
     return (
         <div className='contact-us-parent'>
-            <div className='section-1'>
-                <img src={contact_us} className='section-img' />
-            </div>
-            <div className='section-2'>
-                <form onSubmit={onSubmit}>
-                    <label className='title-lab' >Contact Us</label>
-                    <input className='input-field' type="text" name="name" placeholder="Name" required value={name} onChange={(e) => { setName(e.target.value) }} /><br />
-                    <input className='input-field' type="email" name="email" placeholder="Email Address" required value={emailAddress} onChange={(e) => { setEmailAddress(e.target.value) }} /><br />
-                    <input className='input-field' type="tel" name="tel" placeholder="Mobile Number" required value={mbNo} onChange={onMobileNumberChange} maxLength="10" /><br />
-                    <textarea className='input-field input-field-text-area' name="message" placeholder="Message" required value={msg} onChange={(e) => { setMsg(e.target.value) }}></textarea><br />
-                    <button className='submit-btn' type="submit" value="Submit" > Send Message </button>
-                </form>
+            <div className="contact-container">
+                <div className="contact-grid">
+                    <div className='section-1'>
+                        <div className="contact-info">
+                            <h2>Let's Work Together</h2>
+                            <p>
+                                Ready to bring your ideas to life? I'm always excited to work on
+                                new projects and collaborate with amazing people. Let's create
+                                something extraordinary together.
+                            </p>
+
+                            <div className="contact-details">
+                                <div className="contact-item">
+                                    <div className="contact-icon">
+                                        <FontAwesomeIcon icon={faMapMarkerAlt} />
+                                    </div>
+                                    <span>Mumbai, Maharashtra, India</span>
+                                </div>
+                                <div className="contact-item">
+                                    <div className="contact-icon">
+                                        <FontAwesomeIcon icon={faPhone} />
+                                    </div>
+                                    <span>+91 996 026 2933</span>
+                                </div>
+                                <div className="contact-item">
+                                    <div className="contact-icon">
+                                        <FontAwesomeIcon icon={faEnvelope} />
+                                    </div>
+                                    <span>patilshubham373737@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='section-2'>
+                        <div className="contact-form">
+                            <form onSubmit={onSubmit}>
+                                <label className='title-lab'>Send Message</label>
+                                <input
+                                    className='input-field'
+                                    type="text"
+                                    name="name"
+                                    placeholder="Your Name"
+                                    required
+                                    value={name}
+                                    onChange={(e) => { setName(e.target.value) }}
+                                />
+                                <input
+                                    className='input-field'
+                                    type="email"
+                                    name="email"
+                                    placeholder="Your Email Address"
+                                    required
+                                    value={emailAddress}
+                                    onChange={(e) => { setEmailAddress(e.target.value) }}
+                                />
+                                <input
+                                    className='input-field'
+                                    type="tel"
+                                    name="tel"
+                                    placeholder="Your Mobile Number"
+                                    required
+                                    value={mbNo}
+                                    onChange={onMobileNumberChange}
+                                    maxLength="10"
+                                />
+                                <textarea
+                                    className='input-field input-field-text-area'
+                                    name="message"
+                                    placeholder="Tell me about your project..."
+                                    required
+                                    value={msg}
+                                    onChange={(e) => { setMsg(e.target.value) }}
+                                ></textarea>
+                                <button className='submit-btn' type="submit">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

@@ -1,103 +1,247 @@
+/* ==============================================
+   CONTACT SECTION - MODERN DESIGN
+   ============================================== */
+
 .contact-us-parent {
-    display: flex;
-    /* flex-direction: column; */
-    height: 40rem;
-    background-color: #000;
-    justify-content: space-between;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-us-parent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
 }
 
 .section-1 {
-    width: 50%;
-    height: 100%;
     position: relative;
+    z-index: 2;
+}
 
+.contact-info {
+    color: white;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.contact-info p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
 .section-2 {
-    /* flex: 1; */
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px; */
-    width: 50%;
-    /* padding: 80px */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
-.section-img {
-    position: absolute;
-    right: 77px;
-    height: 100%;
-    width: 74%;
-}
-
-.input-field {
-    font: 0.8rem "Fira Sans", sans-serif;
-    height: 6%;
-    padding: 3.5%;
-    width: 100%;
-    outline: none;
-    background-color: #222222;
-    border: none;
-    color: #7b7b7b;
-    /* border radius */
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-}
-
-.input-field:focus {
-    color: #fff;
-}
-
-.input-field-text-area {
-    height: 25%;
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 form {
-    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 67%;
-    align-items: center;
-    padding-top: 5rem;
-}
-
-.submit-btn {
-    height: 10%;
-    width: 30%;
-    outline: none;
-    background-color: #222222;
-    border: none;
-    color: #fff;
-    border-radius: 20px;
-
+    gap: 1.5rem;
+    width: 100%;
 }
 
 .title-lab {
     font-size: 2rem;
-    color: #fff;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.input-field:-webkit-autofill {
-    background-color: #222222 !important;
-    color: white !important;
-    /* Force white text */
-    font-family: inherit !important;
+.input-field {
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-field::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-field:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.input-field-text-area {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Autofill Styling */
+.input-field:-webkit-autofill,
+.input-field:-webkit-autofill:hover,
+.input-field:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1) inset !important;
     -webkit-text-fill-color: white !important;
-    /* Crucial for autofill text */
     transition: background-color 5000s ease-in-out 0s;
 }
 
-/* Firefox Autofill Styling */
 .input-field:-moz-autofill {
-    background-color: #222222 !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
     color: white !important;
 }
 
-/* Autofilled Field on Focus */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .contact-us-parent {
+        padding: 4rem 0;
+    }
+    
+    .contact-container {
+        padding: 0 1rem;
+    }
+    
+    .contact-form {
+        padding: 2rem;
+    }
+    
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+    
+    .title-lab {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .contact-info h2 {
+        font-size: 1.75rem;
+    }
+    
+    .title-lab {
+        font-size: 1.5rem;
+    }
+    
+    .input-field {
+        padding: 0.875rem;
+    }
+}
 .input-field:-webkit-autofill:focus,
 .input-field:-moz-autofill:focus {
     border: 2px solid #FFD43B;

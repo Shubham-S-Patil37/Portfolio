@@ -6,18 +6,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import "./cards.css"
 
-const Card = ({ title, completed, icon, exp }) => {
+const Card = ({ title, completed, icon, exp, color = "#F0BF55" }) => {
     return (
         <div className="card-parent">
             <div className='icon-parent'>
-                <FontAwesomeIcon icon={icon} className='icon' style={{ color: "#F0BF55" }} />
+                <FontAwesomeIcon icon={icon} className='icon' style={{ color: color }} />
             </div>
-            <div>
+            <div className="card-content">
                 <div className='title'>{title}</div>
-                <div className='sub-title'>{exp} years of experience</div>
+                <div className='sub-title'>{exp} year{exp > 1 ? 's' : ''} of experience</div>
             </div>
             <div className='progress-bar-parent'>
-                <ProgressBar completed={completed} bgColor="#F0BF55" isLabelVisible={false} className='wrapper' height='1vh' width='100%' />
+                <ProgressBar
+                    completed={completed}
+                    bgColor={color}
+                    isLabelVisible={false}
+                    className='wrapper'
+                    height='6px'
+                    width='100%'
+                    labelColor="transparent"
+                />
             </div>
         </div>
     )

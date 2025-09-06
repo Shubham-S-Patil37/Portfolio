@@ -1,7 +1,7 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import Typewriter from 'typewriter-effect';
 import { faGithub, faLinkedin, faConnectdevelop, faPhoenixFramework, faCloudflare, faHtml5, faReact, faNodeJs, faPython, faCss3Alt, faJava } from '@fortawesome/free-brands-svg-icons';
-import { faPersonWalking, faUsers, faFeather, faChalkboard, faDoorOpen, faExplosion, faDatabase, faScroll } from '@fortawesome/free-solid-svg-icons';
+import { faPersonWalking, faUsers, faFeather, faChalkboard, faDoorOpen, faExplosion, faDatabase, faScroll, faArrowRight, faDownload, faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faChessQueen } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -20,6 +20,19 @@ import cv from "../../assets/Shubham_Patil Resume.pdf"
 import "../Home/home.css"
 
 const Home = () => {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            setScrolled(offset > 50);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const homeRef = useRef(null);
     const aboutRef = useRef(null);
@@ -29,37 +42,52 @@ const Home = () => {
 
     const socialMedia = [
         { "Name": "Github", "icon": faGithub, "url": "https://github.com/Shubham-S-Patil37" },
-        { "Name": "Linkedin", "icon": faLinkedin, "url": "https://github.com/Shubham-S-Patil37" },
-        // { "Name": "Instagram", "icon": faGithub, "url": "https://github.com/Shubham-S-Patil37" },
+        { "Name": "Linkedin", "icon": faLinkedin, "url": "https://www.linkedin.com/in/shubham-patil37" },
     ]
 
     const homeIntoCard = [
-        { "icon": faConnectdevelop, "title": "Technology", "description": "Experienced in a diverse range of technologies, including front-end and back-end development, ensuring seamless integration, scalable solutions, and optimal performance." },
-        { "icon": faPhoenixFramework, "title": "Problem Solving", "description": "Effective problem-solving involves analyzing challenges, identifying root causes, and implementing practical solutions. It requires critical thinking, creativity, and technical expertise to overcome obstacles efficiently." },
-        { "icon": faPersonWalking, "title": "Smart Coding", "description": "A focus on smart work ensures efficient solutions with minimal effort and maximum impact. Writing clean, optimized code across enables seamless integration and high performance." },
-        { "icon": faChessQueen, "title": "Strategic Thinking", "description": "Strategic thinking involves planning with foresight, setting clear objectives, and aligning resources to achieve long-term goals. It emphasizes evaluating risks, identifying opportunities, and making data-driven decisions." },
+        {
+            "icon": faConnectdevelop,
+            "title": "Full Stack Development",
+            "description": "Comprehensive end-to-end development expertise spanning frontend interfaces, backend systems, and database architecture with modern technology stacks."
+        },
+        {
+            "icon": faPhoenixFramework,
+            "title": "System Architecture",
+            "description": "Strategic planning and implementation of scalable, maintainable software architectures that drive business growth and operational efficiency."
+        },
+        {
+            "icon": faPersonWalking,
+            "title": "Agile Development",
+            "description": "Rapid iteration and deployment using modern development methodologies, ensuring quick time-to-market while maintaining code quality standards."
+        },
+        {
+            "icon": faChessQueen,
+            "title": "Technical Leadership",
+            "description": "Guiding development teams through complex technical challenges while establishing best practices and maintaining high-quality deliverables."
+        },
     ]
 
 
     const myServiceInfo = [
-        { "icon": faFeather, "title": "Creative Design" },
-        { "icon": faChalkboard, "title": "Efficient Website" },
-        { "icon": faCloudflare, "title": "Seamless API Integration" },
-        { "icon": faUsers, "title": "User-Friendly UI/UX" },
-        { "icon": faDoorOpen, "title": "Microservices Expertise" },
-        { "icon": faExplosion, "title": "Performance Optimization" },
+        { "icon": faFeather, "title": "UI/UX Design", "subtitle": "Crafting intuitive user experiences" },
+        { "icon": faChalkboard, "title": "Web Development", "subtitle": "Modern, responsive applications" },
+        { "icon": faCloudflare, "title": "API Integration", "subtitle": "Seamless third-party connections" },
+        { "icon": faUsers, "title": "User Research", "subtitle": "Data-driven design decisions" },
+        { "icon": faDoorOpen, "title": "Microservices", "subtitle": "Scalable architecture solutions" },
+        { "icon": faExplosion, "title": "Performance", "subtitle": "Optimized loading & efficiency" },
     ]
 
     const skillSet = [
-        { "Name": "React JS", "Completed": "70", "icon": faReact, "exp": 2 },
-        { "Name": "Node JS", "Completed": "80", "icon": faNodeJs, "exp": 3 },
-        { "Name": "Python", "Completed": "80", "icon": faPython, "exp": 3 },
-        { "Name": "Express JS", "Completed": "70", "icon": faScroll, "exp": 2 },
-        { "Name": "Nest JS", "Completed": "70", "icon": faScroll, "exp": 2 },
-        { "Name": "Mongo DB", "Completed": "70", "icon": faDatabase, "exp": 2 },
-        { "Name": "JAVA", "Completed": "70", "icon": faJava, "exp": 1 },
-        { "Name": "HTML", "Completed": "90", "icon": faHtml5, "exp": 2 },
-        { "Name": "CSS", "Completed": "40", "icon": faCss3Alt, "exp": 2 },
+        { "Name": "React JS", "Completed": "85", "icon": faReact, "exp": 3, "color": "#61DAFB" },
+        { "Name": "Node JS", "Completed": "80", "icon": faNodeJs, "exp": 3, "color": "#68A063" },
+        { "Name": "Python", "Completed": "75", "icon": faPython, "exp": 2, "color": "#3776AB" },
+        { "Name": "Express JS", "Completed": "85", "icon": faScroll, "exp": 3, "color": "#000000" },
+        { "Name": "Nest JS", "Completed": "70", "icon": faScroll, "exp": 2, "color": "#E0234E" },
+        { "Name": "MongoDB", "Completed": "80", "icon": faDatabase, "exp": 3, "color": "#47A248" },
+        { "Name": "Java", "Completed": "65", "icon": faJava, "exp": 1, "color": "#ED8B00" },
+        { "Name": "HTML5", "Completed": "95", "icon": faHtml5, "exp": 4, "color": "#E34F26" },
+        { "Name": "CSS3", "Completed": "85", "icon": faCss3Alt, "exp": 3, "color": "#1572B6" },
     ]
 
     const onClickSocialMediaIcon = (url) => { window.open(url, "_blank"); }
@@ -80,142 +108,252 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <div className="portfolio-container">
             <Nav onClickMenu={onClickMenu} />
-            {/* ********************************************************************** HOME ********************************************************************** */}
-            <div className='home-parent' ref={homeRef}>
-                <div className="img-wrapper">
-                    <img src={homeBG} alt="Background" className='home-back-img' />
+
+            {/* ********************************************************************** HERO SECTION ********************************************************************** */}
+            <section className='hero-section' ref={homeRef}>
+                <div className="hero-background">
+                    <div className="hero-overlay"></div>
+                    <img src={homeBG} alt="Background" className='hero-bg-image' />
                 </div>
-                <div className='home-container'>
-                    <div style={{ display: "flex", alignItems: "center" }}>
-                        <div className='home-section-1'>
-                            <div >
-                                <div className='dev-title-1'>
-                                    Hello I' M
+
+                <div className='hero-content'>
+                    <div className="hero-grid">
+                        <div className='hero-text'>
+                            <div className="hero-badge">
+                                <span className="badge-text">Available for freelance</span>
+                            </div>
+
+                            <h1 className='hero-greeting'>
+                                Hello, I'm <span className="hero-name">Shubham Patil</span>
+                            </h1>
+
+                            <div className='hero-role'>
+                                <span className="role-prefix">A passionate </span>
+                                <span className="role-typewriter">
+                                    <Typewriter
+                                        options={{
+                                            strings: ['Full Stack Developer', 'Software Engineer', 'Problem Solver'],
+                                            autoStart: true,
+                                            loop: true,
+                                            delay: 75,
+                                            deleteSpeed: 50,
+                                        }}
+                                    />
+                                </span>
+                            </div>
+
+                            <p className="hero-description">
+                                Crafting digital experiences with modern technologies.
+                                Specialized in building scalable web applications that drive business growth.
+                            </p>
+
+                            <div className='hero-actions'>
+                                <div className='hero-social'>
+                                    {socialMedia.map((social, index) => (
+                                        <a
+                                            key={index}
+                                            href={social.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className='social-link'
+                                            aria-label={social.Name}
+                                        >
+                                            <FontAwesomeIcon icon={social.icon} />
+                                        </a>
+                                    ))}
                                 </div>
-                                <div className='dev-title-2'>
-                                    Shubham Patil
+
+                                <div className="hero-buttons">
+                                    <a href={cv} download="Shubham_Patil_Resume.pdf" className='btn-primary'>
+                                        <FontAwesomeIcon icon={faDownload} />
+                                        Download Resume
+                                    </a>
+                                    <button
+                                        className='btn-secondary'
+                                        onClick={() => contactUsRef.current.scrollIntoView({ behavior: 'smooth' })}
+                                    >
+                                        Let's Talk
+                                        <FontAwesomeIcon icon={faArrowRight} />
+                                    </button>
                                 </div>
-                                <div className='dev-title-3'>
-                                    <span> A passionate </span>
-                                    {/* <samp style={{ color: "#32CD32" }}> Software Developer </samp> */}
-                                    <samp style={{ color: "#32CD32" }}>
-                                        <Typewriter
-                                            options={{ strings: ['Software Developer', 'Freelancer'], autoStart: true, loop: true, }}
-                                        />
-                                    </samp>
+                            </div>
+                        </div>
+
+                        <div className='hero-image'>
+                            <div className="profile-container">
+                                <div className="profile-decoration"></div>
+                                <img src={profile} alt="Shubham Patil" className='profile-image' />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Expertise Cards */}
+                <div className='expertise-section'>
+                    <div className="expertise-grid">
+                        {homeIntoCard.map((card, index) => (
+                            <div key={index} className='expertise-card'>
+                                <div className="card-icon">
+                                    <FontAwesomeIcon icon={card.icon} />
+                                </div>
+                                <h3 className="card-title">{card.title}</h3>
+                                <p className="card-description">{card.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            {/* ********************************************************************** ABOUT SECTION ********************************************************************** */}
+            <section className='about-section' ref={aboutRef}>
+                <div className='section-container'>
+                    <div className="about-grid">
+                        <div className='about-content'>
+                            <div className="section-header">
+                                <span className="section-badge">About Me</span>
+                                <h2 className="section-title">Turning Ideas Into Digital Reality</h2>
+                            </div>
+
+                            <div className="about-description">
+                                <p>
+                                    I'm a passionate Full Stack Developer with expertise in creating robust,
+                                    scalable web applications. My journey in software development has equipped
+                                    me with a comprehensive understanding of both frontend and backend technologies.
+                                </p>
+                                <p>
+                                    I specialize in modern JavaScript frameworks, API development, and database
+                                    management, with a strong focus on delivering exceptional user experiences
+                                    and maintainable code architecture.
+                                </p>
+                            </div>
+
+                            <div className='about-details'>
+                                <div className="details-grid">
+                                    <div className="detail-item">
+                                        <span className="detail-label">Name:</span>
+                                        <span className="detail-value">Shubham S Patil</span>
+                                    </div>
+                                    <div className="detail-item">
+                                        <span className="detail-label">Age:</span>
+                                        <span className="detail-value">26 Years</span>
+                                    </div>
+                                    <div className="detail-item">
+                                        <span className="detail-label">Role:</span>
+                                        <span className="detail-value">Full Stack Developer</span>
+                                    </div>
+                                    <div className="detail-item">
+                                        <span className="detail-label">Education:</span>
+                                        <span className="detail-value">B.Tech</span>
+                                    </div>
+                                    <div className="detail-item">
+                                        <span className="detail-label">
+                                            <FontAwesomeIcon icon={faPhone} />
+                                        </span>
+                                        <span className="detail-value">+91 996 026 2933</span>
+                                    </div>
+                                    <div className="detail-item">
+                                        <span className="detail-label">
+                                            <FontAwesomeIcon icon={faEnvelope} />
+                                        </span>
+                                        <span className="detail-value">patilshubham373737@gmail.com</span>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className='social-icon-parent'>
-                                {
-                                    socialMedia.map((ele) =>
-                                        <FontAwesomeIcon icon={ele.icon} className='social-icon-item' onClick={() => { onClickSocialMediaIcon(ele.url) }} />
-                                    )
-                                }
+                            <div className="about-stats">
+                                <div className="stat-item">
+                                    <span className="stat-number">3+</span>
+                                    <span className="stat-label">Years Experience</span>
+                                </div>
+                                <div className="stat-item">
+                                    <span className="stat-number">50+</span>
+                                    <span className="stat-label">Projects Completed</span>
+                                </div>
+                                <div className="stat-item">
+                                    <span className="stat-number">25+</span>
+                                    <span className="stat-label">Happy Clients</span>
+                                </div>
                             </div>
-                            <div >
-                                <a href={cv} download="Shubham_CV.pdf" >
-                                    <button className='download-cv' onClick={onClickDownloadCV} >Download CV</button>
-                                </a>
+                        </div>
+
+                        <div className='about-image'>
+                            <div className="about-image-container">
+                                <img src={aboutMe} alt="About Me" className='about-profile' />
+                                <div className="image-decoration"></div>
                             </div>
                         </div>
-                        <div className='home-section-2'>
-                            <img src={profile} alt="Background" className='home-profile' />
-                        </div>
                     </div>
                 </div>
-
-                <div className='service-parent'>
-                    <div className='service-section-1'>
-                        <img src={myServiceImage} style={{ height: "100%", width: '85%' }} />
-                    </div>
-                    <div className='service-section-2'>
-                        <div className='service-section-2-title' >What kind of services i provides</div>
-                        <div className='service-section-2-description'>
-                            I offer innovative digital solutions tailored to meet business needs, ensuring high performance, security, and seamless user experiences. My services focus on delivering scalable, efficient, and modern technology solutions with precision and creativity.
-                        </div>
-
-                        <div className='service-item-parent'>
-
-                            {
-                                myServiceInfo.map((ele) =>
-                                    <span className='service-item'>
-                                        <FontAwesomeIcon icon={ele.icon} />
-                                        {/* <img src={ele.icon} alt="Background" className='service-item-icon' /> */}
-                                        <div>{ele.title}</div>
-                                    </span>
-                                )
-                            }
-
-                        </div>
-                    </div>
+            </section>
+            {/* ********************************************************************** SERVICES SECTION ********************************************************************** */}
+            <section className='services-overview' ref={servicesRef}>
+                <div className="services-background">
+                    <img src={myServiceImage} alt="Services Background" className="services-bg-image" />
+                    <div className="services-overlay"></div>
                 </div>
 
-
-            </div>
-            {/* ********************************************************************** ABOUT ME ********************************************************************** */}
-
-            <div className='about-me-parent' ref={aboutRef}>
-                <div className='about-container'>
-                    <div className='about-me-section-1'>
-                        <div className='about-me-title'>ABOUT ME</div>
-                        <div className='about-me-title2'>I Develop System that Works</div>
-                        <div className="about-me-description">
-                            Creative Fullstack Developer with a robust proficiency in API-driven design encompassing Frontend, Backend, and REST API
-                            development. Specializes in various databases, including MongoDB, with expertise in Microservices and MVC Architecture.
-                            Demonstrates excellence in managing the seamless interchange of data between servers and users.
-                        </div>
-
-                        <div className='about-me-user-info'>
-                            <ul className='about-me-user-info-container'>
-                                <li className='about-me-user-info-key'>
-                                    <p>Name</p>
-                                    <p>AGE</p>
-                                    <p>Designation</p>
-                                </li>
-                                <li>
-                                    <p>Shubham S Patil</p>
-                                    <p>26 Years</p>
-                                    <p>Software Developer</p>
-                                </li>
-                            </ul>
-
-                            <ul className='about-me-user-info-container'>
-                                <li className='about-me-user-info-key'>
-                                    <p>Phone</p>
-                                    <p>Email</p>
-                                    <p>Course</p>
-                                </li>
-                                <li>
-                                    <p>+91 996 026 2933</p>
-                                    <p>patilshubham373737@gmail.com</p>
-                                    <p>B. Tech</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className='about-me-section-2'>
-                        <img src={aboutMe} className='about-me-image' />
-                    </div>
-                </div>
-            </div>
-            {/* ********************************************************************** Services ********************************************************************** */}
-            <div ref={servicesRef} className='services-parent'>
-                <h1 className='services_heading'>What I Bring to the Table</h1>
-                <div className='cards-parent-container'>
-                    {
-                        skillSet.map((ele) =>
-                            <div className='services-card-parent'>
-                                <Card title={ele.Name} completed={ele.Completed} icon={ele.icon} exp={ele.exp} />
+                <div className="section-container">
+                    <div className="services-grid">
+                        <div className="services-content">
+                            <div className="section-header">
+                                <span className="section-badge light">Services</span>
+                                <h2 className="section-title light">Comprehensive Digital Solutions</h2>
                             </div>
-                        )
-                    }
-                </div>
-            </div>
 
-            {/* ********************************************************************** Contact US ********************************************************************** */}
+                            <p className="services-description">
+                                I deliver end-to-end digital solutions that combine technical expertise
+                                with creative problem-solving. From concept to deployment, I ensure
+                                every project meets the highest standards of quality and performance.
+                            </p>
+
+                            <div className='services-grid-items'>
+                                {myServiceInfo.map((service, index) => (
+                                    <div key={index} className='service-item'>
+                                        <div className="service-icon">
+                                            <FontAwesomeIcon icon={service.icon} />
+                                        </div>
+                                        <div className="service-content">
+                                            <h4 className="service-title">{service.title}</h4>
+                                            <p className="service-subtitle">{service.subtitle}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ********************************************************************** SKILLS SECTION ********************************************************************** */}
+            <section className='skills-section'>
+                <div className="section-container">
+                    <div className="section-header centered">
+                        <span className="section-badge">Technical Skills</span>
+                        <h2 className="section-title">Technologies I Work With</h2>
+                        <p className="section-description">
+                            A comprehensive toolkit of modern technologies and frameworks
+                            that enable me to build robust, scalable applications.
+                        </p>
+                    </div>
+
+                    <div className='skills-grid'>
+                        {skillSet.map((skill, index) => (
+                            <div key={index} className='skill-card'>
+                                <Card
+                                    title={skill.Name}
+                                    completed={skill.Completed}
+                                    icon={skill.icon}
+                                    exp={skill.exp}
+                                    color={skill.color}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ********************************************************************** CONTACT SECTION ********************************************************************** */}
             <div ref={contactUsRef}>
                 <ContactUS />
             </div>
