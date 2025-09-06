@@ -42,7 +42,7 @@ const Home = () => {
 
     const socialMedia = [
         { "Name": "Github", "icon": faGithub, "url": "https://github.com/Shubham-S-Patil37" },
-        { "Name": "Linkedin", "icon": faLinkedin, "url": "https://www.linkedin.com/in/shubham-patil37" },
+        { "Name": "Linkedin", "icon": faLinkedin, "url": "https://www.linkedin.com/in/shubham37" },
     ]
 
     const homeIntoCard = [
